@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   resources :todo_lists do
     resources :todo_items do
       member do
@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end    
   end  
   
+  devise_for :users
+
   get 'welcome/index'
 
   root "welcome#index"

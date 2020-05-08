@@ -6,7 +6,9 @@ Rails.application.routes.draw do
         patch :complete
       end
     end    
-  end  
+  end
+  
+  resources :notes
   
   get 'dashboard/space'
   devise_for :users

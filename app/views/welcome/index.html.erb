@@ -9,5 +9,16 @@
 
 
 
+    <%= javascript_pack_tag 'index' %>
+    <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="indexcontainer">
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+<script type="text/javascript" src="/javascripts/packs/index.js"></script>
+
+<div id="clock">
+    <p class="date">{{ date }}</p>
+    <p class="time">{{ time }}</p>
+    <p class="text">YOUR WORLD </p>
+</div>
+

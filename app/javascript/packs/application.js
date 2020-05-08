@@ -11,7 +11,7 @@ require("jquery")
 
 require("bootstrap")
 
-require("packs/index")
+// require("packs/index")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -1,23 +1,30 @@
-<h2>Log in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="panel panel--static">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  
+    <div style="position: relative; left: 570px; color: white">
+        <h1 class="panel__heading">WELCOME BACK</h1>
+        <p class="panel__copy">We are HAPPY to have you back.</p></br>
+        <p class="panel__copy">DON'T HAVE AN ACCOUNT?</p>
+        <%= render "devise/shared/links" %>
+    </div>
+    
+    <div class="panel panel--sliding">
+        <div class="panel__content signup">
+            <h1 class="panel__heading">Sign in</h1>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  
+       <form id="signup">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input input--email" %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: "input input--password" %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          <%= f.button :submit, "Log in", class: "btn btn--primary" %>
+    <% end %>
+      </form>
 
-<%= render "devise/shared/links" %>
+        </div>
+            </div>    
+</div>

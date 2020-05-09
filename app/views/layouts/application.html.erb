@@ -12,8 +12,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
-  <body>
-
+<body class="<%= controller_name %>-<%= action_name %>">
     <% if notice %>
     <p class="notice"><%= notice %></p>
     <% end %>
@@ -49,7 +48,7 @@
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path %>
-   <%= link_to "Sign In", new_user_session_path %>
+   <%= link_to "Sign in", new_user_session_path %>
 <% end %>
 
 

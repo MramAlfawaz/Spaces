@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   end
   
   resources :notes
+
+  # authenticated :user do
+  #   get 'notes#index', as: "authenticated_root"
+  # end
   
   get 'dashboard/space'
   devise_for :users

@@ -34,13 +34,13 @@
 //     clouds: '☁',
 //   };
 
-fetch(`https://source.unsplash.com/1600x900/?beach`).then((response) => {   
+// fetch(`https://source.unsplash.com/1600x900/?beach`).then((response) => {   
        
-    document.body.style.backgroundImage = `url("${response.url}")`;
-    document.body.style.backgroundRepeat= "no-repeat";
-    document.body.style.backgroundSize = "cover"
+//     document.body.style.backgroundImage = `url("${response.url}")`;
+//     document.body.style.backgroundRepeat= "no-repeat";
+//     document.body.style.backgroundSize = "cover"
     
-  }) 
+//   }) 
 
 
 //   axios({

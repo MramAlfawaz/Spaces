@@ -1,61 +1,83 @@
     <%= javascript_pack_tag 'index' %>
+
 <div class="spacecontainer">
-   <div class="page-header">
+
      <h1 class="spaceh1"> <span class="glyphicon glyphicon-star"> Dily Websites</span> </h1>
-
-   </div>
-
-<div class="row">
-<div class="col-sm-6">
-<ul class="spaceul">
-   <% @favorites.each do |favorite|%>
-    <li> 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-body">
+  <div class="row">
+    <div class="col-sm-6">
+    <ul class="spaceul">
+        <% @favorites.each do |favorite|%>
+          <li> 
+            <div class="panel panel-default">
+              <div class="panel-body">
                <h3 class="panel-title"> <%= link_to (favorite.name), "#{favorite.url}",
                   target: "_blank" %> 
                </h3>    
-          </div>
-        </div> 
-    </li>
-   <% end %>
-     <li> 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-               <h3> 
+              </div>
+            </div> 
+          </li>
+        <% end %>
+
+      <li> 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h5> 
                <%= link_to "", new_favorite_path, class:  "glyphicon glyphicon-plus"  %> 
-               </h3>    
-        </div> 
-    </li>
-</ul>
-</div>
+               </h5>    
+          </div> 
+      </li>
+    </ul>
+  </div>
 
    <div class="col-sm-4">
-   <h1 class="spaceh1weather"> <span class="glyphicon glyphicon-star"> Weather</span> </h1>
+     <h5 class="spaceh1weather"> <span class="glyphicon glyphicon-star"> Your Notes</span> </h5>
+      <ul class="spaceul">
+        <% @notes.each do |note|%>
+          <li>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                 <%= link_to note.title, note %> 
+             </div>
+            </div>
+          </li>
+        <% end %> 
+         <li> 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h6> 
+               <%= link_to "Add note ", new_note_path %> 
+              <%= link_to "| All notes", notes_path  %> 
+               </h6>    
+          </div> 
+          
+      </li> 
+      </ul>
 
-       <ul class="spaceul">
-         <% @weathers.each do |weather|%>
-         <li>
+      <h5 class="spaceh1weather"> <span class="glyphicon glyphicon-star"> TO-DO List </span> </h5>
+      <ul class="spaceul">
+        <% @todo_lists.each do |todo_list|%>
+          <li>
             <div class="panel panel-default">
-            <div class="panel-body">
-            <%# <%= simple_format weather.image, class="pull-left"%> %>
-            <%# <h2><%= weather.current_temperature %></h2> %>
-           <h5><%= weather.city %></h5> 
-           </div>
-           </div>
-         </li>
-            <li>
-            <div class="panel panel-default">
-            <div class="panel-body">
-           <h5><%= weather.city %></h5> 
-           </div>
-           </div>
-         </li>
-         <% end %>
-         
-       </ul>
+              <div class="panel-body">
+                 <%= link_to todo_list.title, todo_list %> 
+             </div>
+            </div>
+          </li>
+        <% end %> 
+         <li> 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h6> 
+               <%= link_to "Add list ", new_todo_list_path %> 
+              <%= link_to "| All lists", todo_lists_path  %> 
+               </h6>    
+          </div> 
+          
+      </li> 
+      </ul>
     </div>
+
+    
 
 </div>
 

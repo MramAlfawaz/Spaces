@@ -19,8 +19,6 @@ Rails.application.routes.draw do
   root 'dashboard#space'
   devise_for :users
 
-  get 'welcome/index'
-
   # root "welcome#index"
   # root "todo_lista#index"
 

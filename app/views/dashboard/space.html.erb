@@ -1,3 +1,63 @@
-<h1>YOUR WORLD</h1>
+    <%= javascript_pack_tag 'index' %>
+<div class="spacecontainer">
+   <div class="page-header">
+     <h1 class="spaceh1"> <span class="glyphicon glyphicon-star"> Dily Websites</span> </h1>
 
-<ul></ul>
+   </div>
+
+<div class="row">
+<div class="col-sm-6">
+<ul class="spaceul">
+   <% @favorites.each do |favorite|%>
+    <li> 
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-body">
+               <h3 class="panel-title"> <%= link_to (favorite.name), "#{favorite.url}",
+                  target: "_blank" %> 
+               </h3>    
+          </div>
+        </div> 
+    </li>
+   <% end %>
+     <li> 
+      <div class="panel panel-default">
+        <div class="panel-heading">
+               <h3> 
+               <%= link_to "", new_favorite_path, class:  "glyphicon glyphicon-plus"  %> 
+               </h3>    
+        </div> 
+    </li>
+</ul>
+</div>
+
+   <div class="col-sm-4">
+   <h1 class="spaceh1weather"> <span class="glyphicon glyphicon-star"> Weather</span> </h1>
+
+       <ul class="spaceul">
+         <% @weathers.each do |weather|%>
+         <li>
+            <div class="panel panel-default">
+            <div class="panel-body">
+            <%# <%= simple_format weather.image, class="pull-left"%> %>
+            <%# <h2><%= weather.current_temperature %></h2> %>
+           <h5><%= weather.city %></h5> 
+           </div>
+           </div>
+         </li>
+            <li>
+            <div class="panel panel-default">
+            <div class="panel-body">
+           <h5><%= weather.city %></h5> 
+           </div>
+           </div>
+         </li>
+         <% end %>
+         
+       </ul>
+    </div>
+
+</div>
+
+
+ </div>

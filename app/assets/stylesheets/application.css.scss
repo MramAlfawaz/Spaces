@@ -11,3 +11,25 @@
 @import "global.css.scss";
 @import "notes.css.scss";
 @import "welcome.css.scss";
+@import "favorites.css.scss";
+
+.spaceh1 {
+    font-size: 40px;
+    color: white;
+}
+
+.spaceitem {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.spaceul {
+    list-style: none;
+    
+}
+
+.spaceh1weather {
+    font-size: 35px;
+    color: white;
+}

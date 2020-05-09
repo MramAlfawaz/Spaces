@@ -1,0 +1,25 @@
+
+<%= simple_form_for(@weather) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.label :zip_code %>
+    <%= f.text_field :zip_code %>
+  </div>
+
+   <div class="form-inputs">
+    <%= f.label :identifier %>
+    <%= f.text_field :identifier %>
+  </div>
+
+  
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

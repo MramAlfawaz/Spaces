@@ -6,5 +6,6 @@ class User < ApplicationRecord
   
   has_many :notes
   has_many :todo_lists
+  has_many :favorites
 
 end

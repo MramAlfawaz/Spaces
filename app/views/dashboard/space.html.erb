@@ -1,3 +1,85 @@
-<h1>YOUR WORLD</h1>
+    <%= javascript_pack_tag 'index' %>
 
-<ul></ul>
+<div class="spacecontainer">
+
+     <h1 class="spaceh1"> <span class="glyphicon glyphicon-star"> Dily Websites</span> </h1>
+  <div class="row">
+    <div class="col-sm-6">
+    <ul class="spaceul">
+        <% @favorites.each do |favorite|%>
+          <li> 
+            <div class="panel panel-default">
+              <div class="panel-body">
+               <h3 class="panel-title"> <%= link_to (favorite.name), "#{favorite.url}",
+                  target: "_blank" %> 
+               </h3>    
+              </div>
+            </div> 
+          </li>
+        <% end %>
+
+      <li> 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h5> 
+               <%= link_to "", new_favorite_path, class:  "glyphicon glyphicon-plus"  %> 
+               </h5>    
+          </div> 
+      </li>
+    </ul>
+  </div>
+
+   <div class="col-sm-4">
+     <h5 class="spaceh1weather"> <span class="glyphicon glyphicon-star"> Your Notes</span> </h5>
+      <ul class="spaceul">
+        <% @notes.each do |note|%>
+          <li>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                 <%= link_to note.title, note %> 
+             </div>
+            </div>
+          </li>
+        <% end %> 
+         <li> 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h6> 
+               <%= link_to "Add note ", new_note_path %> 
+              <%= link_to "| All notes", notes_path  %> 
+               </h6>    
+          </div> 
+          
+      </li> 
+      </ul>
+
+      <h5 class="spaceh1weather"> <span class="glyphicon glyphicon-star"> TO-DO List </span> </h5>
+      <ul class="spaceul">
+        <% @todo_lists.each do |todo_list|%>
+          <li>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                 <%= link_to todo_list.title, todo_list %> 
+             </div>
+            </div>
+          </li>
+        <% end %> 
+         <li> 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h6> 
+               <%= link_to "Add list ", new_todo_list_path %> 
+              <%= link_to "| All lists", todo_lists_path  %> 
+               </h6>    
+          </div> 
+          
+      </li> 
+      </ul>
+    </div>
+
+    
+
+</div>
+
+
+ </div>

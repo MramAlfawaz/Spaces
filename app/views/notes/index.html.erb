@@ -1,0 +1,11 @@
+<% @notes.each do |note| %>
+<div>
+<a>href: (url_for [note])</a>
+<p><%= note.title %></p>
+<p><%= time_ago_in_words(note.created_at) %></p>
+</div>
+<% end %>
+
+<div class="links">
+<%= link_to "New Note", new_note_path %>
+</div>	

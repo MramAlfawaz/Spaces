@@ -6,7 +6,7 @@ ruby '2.7.1'
 gem 'devise'
 gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
-gem 'trix'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use postgresql as the database for Active Record
@@ -16,6 +16,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'bootstrap-sass'
+gem "simple_calendar", "~> 2.0"
 
 gem 'autoprefixer-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

@@ -10,7 +10,7 @@ require("channels")
 require("jquery")
 
 require("bootstrap")
-
+require("moment")
 
 // require("packs/index")
 

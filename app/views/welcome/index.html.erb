@@ -14,26 +14,3 @@
     <p id="text">  </p>
 </div>
 
-<%# <script>
-
-    var text = document.createElement("P");                       
-    var t = document.createTextNode("Test."); 
-    document.getElementById("date").append(text.appendChild(t));
-
-    document.getElementById("weather").append(` °  ll`) ;
-  
-
-  fetch(`https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`)
-  .then(response => {
-  console.log(response)
-  document.append(`<p class="quote"> "${response.data.quoteText}"</p>`)
-
-})
-.catch((error) => {
-  console.log(error);
-});
-
-
-
-</script>
- %>

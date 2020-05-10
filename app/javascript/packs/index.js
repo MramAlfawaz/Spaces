@@ -8,11 +8,6 @@ const icons = {
     clouds: '☁',
   };
 
-    // var text = document.body.createElement("P");                       
-    // var t = document.body.createTextNode("Test."); 
-    // document.body.getElementById("date").append(text.appendChild(t));
-
-    // document.body.getElementById("weather").append(` °  ll`) 
   
 
     //api of images

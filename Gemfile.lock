@@ -79,6 +79,7 @@ GEM
       xpath (~> 3.2)
     childprocess (3.0.0)
     concurrent-ruby (1.1.6)
+    content_disposition (1.0.0)
     crass (1.0.6)
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -86,6 +87,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    down (5.1.1)
+      addressable (~> 2.5)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
@@ -177,6 +180,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    shrine (3.2.1)
+      content_disposition (~> 1.0)
+      down (~> 5.1)
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -242,6 +248,7 @@ DEPENDENCIES
   rails (~> 6.0.2, >= 6.0.2.2)
   sass-rails (>= 6)
   selenium-webdriver
+  shrine
   simple_form (~> 5.0, >= 5.0.2)
   spring
   spring-watcher-listen (~> 2.0.0)

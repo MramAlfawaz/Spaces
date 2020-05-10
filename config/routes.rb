@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :photos
   resources :weathers
   resources :favorites
   resources :todo_lists do

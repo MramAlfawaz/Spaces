@@ -10,7 +10,7 @@ require("channels")
 require("jquery")
 
 require("bootstrap")
-
+require("../trix_uploads.js");
 
 // require("packs/index")
 

@@ -18,7 +18,7 @@ $mono: 'PT Mono', monospace;
 $ease: all .3s ease;
 
 body {
-  background-color: #495867;
+  background-color: $light;
 }
 .color-box {
   position: absolute;
@@ -34,8 +34,8 @@ body {
 #dashboard-container {
   position: relative;
   margin: 0 auto;
-  width: 1200px;
-  height: 700px;
+  width: 800px;
+  height: 600px;
   border: 1px solid $light;
   background-color: $white;
 }

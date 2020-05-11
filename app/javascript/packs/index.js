@@ -1,112 +1,119 @@
-// var clock = new Vue({
-//     el: '#clock',
-//     data: {
-//         time: '',
-//         date: ''
-//     }
-// });
+$(function() {
 
-// var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-// var timerID = setInterval(updateTime, 1000);
-// updateTime();
-// function updateTime() {
-//     var cd = new Date();
-//     clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
-//     clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
-// };
+  // =====================================
+// Get Date
+// =====================================
+var date = new Date(),
+year = date.getFullYear(),
+month = date.getMonth(),
+day = date.getUTCDate(),
+months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-// function zeroPadding(num, digit) {
-//     var zero = '';
-//     for(var i = 0; i < digit; i++) {
-//         zero += '0';
-//     }
-//     return (zero + num).slice(-digit);
-// }
+document.getElementById('daymonthyear').innerHTML = day + " " + months[month] + " " + year;
 
+// =====================================
+// Get Time
+// =====================================
 
+function addZero(i) {
+// This checks to see if the number is below 10 and then prepends a '0' - clever shit :P
+if (i < 10) {
+    i = "0" + i;
+}
+return i;
+}
 
-// const icons = {
-//     clear: '🌧',
-//     rain: '️🌧',
-//     storm: '⛈',
-//     snow: '🌨',
-//     mist: '🌫',
-//     clouds: '☁',
-//   };
+function newTime() {
+var d = new Date();
+var h = addZero(d.getHours());
+var m = addZero(d.getMinutes());
+var s = addZero(d.getSeconds());
+var x = document.getElementById("hourminutesecond");
 
-fetch(`https://source.unsplash.com/1600x900/?beach`).then((response) => {   
+x.innerHTML = h + " : " + m + " : " + s;
+}
+
+newTime();
+setInterval(newTime, 1000);
+
+const icons = {
+    clear: '🌧',
+    rain: '️🌧',
+    storm: '⛈',
+    snow: '🌨',
+    mist: '🌫',
+    clouds: '☁',
+  };
+
+  
+
+//     //api of images
+fetch(`https://source.unsplash.com/1600x900/?cloud`).then((response) => {   
        
     document.body.style.backgroundImage = `url("${response.url}")`;
     document.body.style.backgroundRepeat= "no-repeat";
     document.body.style.backgroundSize = "cover"
     
-  }) 
+  }).catch((error) => {
+    console.log(error);
+});
 
 
-//   axios({
-//     method: "get",
-//     url: "http://api.openweathermap.org/data/2.5/weather?q=Jeddah&units=metric&APPID=28a2bd8eb9a1dd27589d6cdd509169e4"
-// })
-// .then(res => {
-    
-//   // console.log(res)
-//   $(function() {
-//     // document.body.innerHTML = '<h2 class="city"> ${res.data.main.temp}° <br> ${res.data.name}</h2>'
-//    $(document).append(`<h2 class="city"> ${res.data.main.temp}° <br> ${res.data.name}</h2>`) 
-//   })
-   
-//  //  $('body').append(`<h1 clsas="temper"> </h1>`) 
-//   // let weather = res.data.weather.main;
+//api of weather
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=Jeddah&units=metric&APPID=28a2bd8eb9a1dd27589d6cdd509169e4`)
+  .then((response) => response.json() )       
+    .then((data) => {       
+console.log(data)
+    $('#weather').append(` ${data.main.temp}° `) 
+
+  let weather;
+ // console.log(res.data.weather)
+ data.weather.forEach(element => {
+      weather = element.main;
+  });
+
+  for(i in icons){
+  //  console.log(i)
+    if(i == weather.toLowerCase()){
+       
+      $('#weather').append(` ${(icons[i])}, ${data.name}`) 
+
+    }
+  }
   
+
+
+  let date = new Date()
+  let now = date.getHours();
+
+  function displayGreeting() {
+    if (now < 11) {
+      return 'good morning';
+    } if ( now > 17) {
+      return 'good evening';
+    } else {
+      return 'good afternoon';
+    }
+  }
   
-//   let weather;
-//  // console.log(res.data.weather)
-//   res.data.weather.forEach(element => {
-//       weather = element.main;
-//   });
-
-//   for(i in icons){
-//   //  console.log(i)
-//     if(i == weather.toLowerCase()){ 
-//         $(document).append(`<h2 class="city"> ${(icons[i])} </h2>`) 
-//     }
-
-//   }
+  document.getElementById('greeting').innerHTML = displayGreeting().toUpperCase();
   
-//   $(document).append(`<h1 class="time"> ${moment().format('LT')}</h1>`)
-//   let date = new Date()
-//   let now = date.getHours();
-//   console.log(now)
-//   if(now >= 12 || now <=17){
-//     $(document).append(`<h3 class="ttext"> Good Afternoon </h3>`)
+}).catch((error) => {
+    console.log(error);
+});
 
-//   }else if(now >= 18 || now <=20){
-//     $(document).append(`<h3 class="ttext"> Good Evening</h3>`)
+fetch(`https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`)
+.then(response => response.json())
+  .then(data => {
 
-//   }else if(now >= 21 || now <=23){
-//     $(document).append(`<h3 class="ttext"> Good Night </h3>`)
+  console.log(data)
+  $('#text').html(` "${data.quoteText}"`)
+})
+.catch((error) => {
+  console.log(error);
+});
 
-//   }else{
-//     $(document).append(`<h3 class="ttext"> Good Morning </h3>`)
-//   }
- 
-
-// })
-// .catch((error) => {
-//     console.log(error);
-// });
+})
 
 
 
-// axios({
-//     method: "get",
-//     url: "https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en"
-// })
-// .then(re => {
-//     console.log(re)
-//   $(document).append(`<p class="quote"> "${re.data.quoteText}"</p>`)
-
-// })
-// .catch((error) => {
-//     console.log(error);
-// });

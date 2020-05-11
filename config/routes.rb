@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :events
+  resources :photos
   resources :weathers
   resources :favorites
   resources :todo_lists do

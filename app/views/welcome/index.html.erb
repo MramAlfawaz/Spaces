@@ -2,15 +2,26 @@
     <%= javascript_pack_tag 'index' %>
     <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+
+
 <div class="indexcontainer">
     
-<h1>Welcome#index</h1>
 
-<div id="clock">
-    <h1 id="greeting">  </h1>
-    <h3 id="weather"></h3>
-    <p id="date">[ ]</p>
-    <p id="time">[ ]</p>
-    <p id="text">  </p>
+<div class="landcontainer">
+
+      <div id="clock"><h4 id="weather" class="h2home">  </h4></div>
+
+
+  <div id="clock">
+
+    <h1 id="greeting" class="ttext">   <h1 class="ttext">, <%= current_user.name %></h1></h1>   
+
+    <p id="daymonthyear" class="date"> </p>
+    <p id="hourminutesecond" class="time"> </p>
+    <p id="text" class="text"></p>
+
 </div>
 
+</div>
+
+</div>

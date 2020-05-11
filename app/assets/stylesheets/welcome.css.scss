@@ -4,35 +4,83 @@
 // .welcome-index
 
 
-.time {
-    font-size: 150px;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 20%;
-   
+// Imports
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700);
+
+// Mixin
+@mixin v-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
+
+// Variables
+$primary: #2196F3;
+$font-family: 'Roboto', sans-serif;
+$depth: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+// Code
 .indexcontainer {
-    width: 100%;
-    height: 100%;
+  font-family: $font-family;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 50px;
 }
+
+#daymonthyear {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.landcontainer {
+    height: 60vh; 
+}
+
+.box {
+  @include v-align;
+  height: 200px;
+  width: 520px;
+  margin: 0 auto;
+  background: rgb(211, 211, 211);
+  box-shadow: $depth;
+  border-radius: 3px;
+}
+
+#daymonthyear {
+  padding: 4rem 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+#hourminutesecond {
+  @extend #daymonthyear;
+  border-top: 1px solid #eeeeee;
+}
+
+
 .h2home{
     float: right;
-    color: white;
- 
-    
+    margin-right: 5px;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);  
 }
 .ttext{
+
     font-size: 65px;
     color: white;
     text-align: center;
-    display: flex;
+    display: inline;
     justify-content: center;
    
 }
 .quote {
     color: white;
+    font-weight: bold;
     font-size: 25px;
     text-align: center;
     margin-bottom: 2px;

@@ -11,6 +11,7 @@ require("jquery")
 
 require("bootstrap")
 require("moment")
+require("../trix_uploads.js");
 
 // require("packs/index")
 

@@ -12,9 +12,9 @@
 
 <div class="indexcontainer">
 
-            <% if user_signed_in? %> 
+ <% if user_signed_in? %> 
     <h1 id="greeting" class="ttext">   <h1 class="ttext">, <%= current_user.name %></h1></h1>  
-         <% end %> 
+    <% end %> 
     <h2 id="hourminutesecond" class="time"> </h2>
 
     <h2 id="daymonthyear" class="date"> </h2>
@@ -26,7 +26,7 @@
        <a class="dash" href="">LOGOUT</a>
      <% else %>
        <a class="dash" href="/users/sign_in">SIGN IN</a>
-       <a class="dash" href="">SIGN UP</a>
+       <a class="dash" href="/users/sign_up">SIGN UP</a>
     <% end %>
     <h3 id="text" class="quote"></h3>
 

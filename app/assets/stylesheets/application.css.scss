@@ -1,7 +1,10 @@
+/*
+    *= require simple_calendar
+    *= require trix
+    *= require_tree
+    *= require_self
+*/
 
- //*= require trix
- //*= require_tree
- //*= require_self
 
 
 // @import "bootstrap.css";
@@ -13,7 +16,6 @@
 // @import "notes.css.scss";
 // @import "welcome.css.scss";
 // // @import "favorites.css.scss";
-
 
 .spaceh1 {
   font-size: 40px;

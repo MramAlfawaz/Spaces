@@ -6,13 +6,15 @@
 <div id="dashboard-container">
   <div class="leftside-menu">
     <div class="avatar">
+            <% if user_signed_in? %> 
       <div class="icon"><p><%= current_user.name.first() %></p></div>
-      <p>Hello, <%= current_user.name %></p>
+      <p> Hello, <%= current_user.name %> </p>
+      <% end %>
     </div>
     <nav class="menu">
-      <li class="active1"><a href="/">Space</a></li>
+      <%# <li class="active1"><a href="/">Space</a></li>
       <li> <a href="">DASHBOARD</a></li>
-      <li><a href="">LOGOUT</a></li>
+      <li><a href="">LOGOUT</a></li> %>
       <li><a href="">EDIT PROFILE</a></li>
     </nav>
   </div>
@@ -36,11 +38,12 @@
               <% end %> 
         </label>
         <br> <br><br>
-           <label class="todo">
+           <label class="todonote">
            <%= link_to "Add note ", new_note_path %> 
-              <%= link_to "| All notes", notes_path  %> 
-        </label>
-          
+        </label> 
+        <label class="todonote">
+              <%= link_to " All notes", notes_path  %> 
+        </label>  
 
       </div>
     </div>
@@ -53,6 +56,7 @@
     </div>
     <div class="item four">
       <h1 id="spacedate"></h1>
+      
       <p><a>no events today</a></p>
     </div>
     
@@ -70,9 +74,9 @@
           </li>
         <% end %>
       <li> 
-               <h5> 
-               <%= link_to "", new_favorite_path, class:  "glyphicon glyphicon-plus"  %> 
-               </h5>    
+        <label>
+         <%= link_to "", new_favorite_path, class:  "glyphicon glyphicon-plus"  %> 
+        </label>  
       </li>
     </ul>
         </div>
@@ -96,12 +100,12 @@
            </span>
         </label>
         <br> <br><br>
-                      
+          
         <label class="todo">
-          <span class="todo-label">View lists | </span>
-        </label>
+          <%= link_to "View lists", todo_lists_path  %> 
+        </label> 
         <label class="todo">
-          <span class="todo-label">Add new list</span>
+          <%= link_to "Add new list", new_todo_list_path %> 
         </label>        
         
       </div>
@@ -111,5 +115,5 @@
 
 
 <footer>
-  <p> <a target="_blank" href="">MARAM</a>♡
+  <p> <a target="_blank" href="">SPACE</a>♡
 </footer>

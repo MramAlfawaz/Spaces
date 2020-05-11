@@ -23,6 +23,7 @@ $depth: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
 // Code
 .indexcontainer {
+  margin-top: 4%;
   font-family: $font-family;
   font-weight: 300;
   text-align: center;
@@ -37,52 +38,108 @@ $depth: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     font-weight: bold;
 }
 
-.landcontainer {
-    height: 60vh; 
-}
-
-.box {
-  @include v-align;
-  height: 200px;
-  width: 520px;
-  margin: 0 auto;
-  background: rgb(211, 211, 211);
-  box-shadow: $depth;
-  border-radius: 3px;
-}
-
 #daymonthyear {
   padding: 4rem 0;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: #ffffff;
 }
 
-#hourminutesecond {
+#daymonthyear {
   @extend #daymonthyear;
   border-top: 1px solid #eeeeee;
 }
 
 
-.h2home{
+.indexweather{
     float: right;
-    margin-right: 5px;
-    margin-top: 5px;
+    margin-top: 1px;
     color: rgb(255, 255, 255);  
 }
-.ttext{
 
-    font-size: 65px;
+.ttext{
+    font-size: 55px;
     color: white;
     text-align: center;
     display: inline;
-    justify-content: center;
-   
+    justify-content: center; 
 }
 .quote {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 25px;
     text-align: center;
-    margin-bottom: 2px;
-    padding-top: 350px;
+    margin-top: 70px;
+}
+
+// nav part
+
+header,
+.landnav
+{
+  display: block;
+}
+
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a {
+  
+  background-color: transparent;
+}
+
+
+
+header,
+.landnav
+ {
+  width: 100%;
+  word-wrap: break-word;
+}
+header,
+.landnav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  position: relative;
+}
+
+.dash {
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+}
+
+.landnav[am-layout][am-layout~="horizontal"] a {
+  -webkit-flex:  4.3333%;
+      -ms-flex:  4.3333%;
+          flex:  4.3333%;
+}
+
+
+
+
+.landnav[am-layout] a:not(.am-floating-action) {
+  padding: 1em;
+  display: inline-block;
+  text-decoration: none;
+}
+
+ header {
+  font-size: 112.5%;
+  line-height: 1.65;
+  color:white;
+}
+
+ header a{
+  color: white;
 }

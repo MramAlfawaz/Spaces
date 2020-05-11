@@ -48,7 +48,7 @@ const icons = {
   
 
 //     //api of images
-fetch(`https://source.unsplash.com/1600x900/?trees`).then((response) => {   
+fetch(`https://source.unsplash.com/1600x900/?cloud`).then((response) => {   
        
     document.body.style.backgroundImage = `url("${response.url}")`;
     document.body.style.backgroundRepeat= "no-repeat";
@@ -76,30 +76,27 @@ console.log(data)
   //  console.log(i)
     if(i == weather.toLowerCase()){
        
-      $('#weather').append(` ${(icons[i])} <br> ${data.name}`) 
+      $('#weather').append(` ${(icons[i])}, ${data.name}`) 
 
     }
   }
   
-  // $('#time').html(`<h1> ${moment().format('LT')}</h1>`)
-  // $('#date').html(`<h1> ${Date()}</h1>`)
+
 
   let date = new Date()
   let now = date.getHours();
-  console.log(now)
-  if(now >= 12 || now <=17){
-    $('#greeting').html(` Good Afternoon `)
 
-  }else if(now >= 18 || now <=20){
-    $('#greeting').html(` Good Evening`)
-
-  }else if(now >= 21 || now <=23){
-    $('#greeting').html(`Good Night `)
-
-  }else{
-    $('#greeting').html(` Good Morning `)
+  function displayGreeting() {
+    if (now < 11) {
+      return 'good morning';
+    } if ( now > 17) {
+      return 'good evening';
+    } else {
+      return 'good afternoon';
+    }
   }
- 
+  
+  document.getElementById('greeting').innerHTML = displayGreeting().toUpperCase();
   
 }).catch((error) => {
     console.log(error);
@@ -110,7 +107,7 @@ fetch(`https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?me
   .then(data => {
 
   console.log(data)
-  $('#text').html(`<p> "${data.quoteText}"</p>`)
+  $('#text').html(` "${data.quoteText}"`)
 })
 .catch((error) => {
   console.log(error);

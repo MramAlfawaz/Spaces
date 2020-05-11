@@ -18,13 +18,8 @@ $mono: 'PT Mono', monospace;
 $ease: all .3s ease;
 
 body {
-    // background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    // background-size: cover;
-background-color: $white;
-    // opacity: 0.9;
-
+  background-color: #495867;
 }
-
 .color-box {
   position: absolute;
   display: flex;
@@ -451,19 +446,24 @@ h2 {
   margin-bottom: -60px;
 }
 
+
 .todo {
 	cursor: pointer;
-	display: inline-block;
+  display: inline-block;
+  margin-left: 90px;
 }
+
+.todonote {
+  margin-left: 30px;
+}
+
 .todo-switch {
 	display: inline-block;
 	background: $white;
 	border-radius: 50%;
-  margin-left: 20px;
 	width: 12px;
 	height: 12px;
 	position: relative;
-	vertical-align: middle;
 	transition: background 0.25s;
 	&:before,
 	&:after {
@@ -479,7 +479,6 @@ h2 {
       transition: $ease;
       position: absolute;
       top: -10px;
-      left: 1px;
     }
 	}
 }
@@ -488,11 +487,9 @@ h2 {
 	display: inline-block;
 	background: $navy;
 	border-radius: 50%;
-  margin-left: 20px;
 	width: 12px;
 	height: 12px;
 	position: relative;
-	vertical-align: middle;
 	transition: background 0.25s;
 	&:before,
 	&:after {
@@ -508,19 +505,13 @@ h2 {
       transition: $ease;
       position: absolute;
       top: -10px;
-      left: 1px;
     }
 	}
 }
 
-.todo-checkbox {
-	position: absolute;
-	visibility: hidden;
-}
 .todo-label {
     font-family: $font;
   font-size: 0.8em;
-	margin-left: 8px;
   text-transform: uppercase;
   letter-spacing: 2px;
 	position: relative;

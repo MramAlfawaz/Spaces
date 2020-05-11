@@ -1,6 +1,8 @@
- <%= javascript_pack_tag 'dashboard' %>
+    <%= javascript_pack_tag 'dashboard' %>
         <%= javascript_pack_tag 'index' %>
+
     <%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <div id="dashboard-container">
   <div class="leftside-menu">
     <div class="avatar">
@@ -17,12 +19,15 @@
     </nav>
   </div>
   <div class="main-grid">
+
     <div class="item one">
       <h1 id="spacetime" class="timespace"></h1>
       <h1 id="spacegreeting"></h1>
       <br>
       <h2 id="spacedate"></h2>
     </div>
+
+
     <div class="item two">
       <div class="music"> <p> <i class="fas fa-pen"></i>  NOTES </p></div>
       <div class="info">
@@ -39,6 +44,7 @@
         <label class="todonote">
               <%= link_to " All notes", notes_path  %> 
         </label>  
+
       </div>
     </div>
     <div class="item three">
@@ -50,8 +56,10 @@
     </div>
     <div class="item four">
       <h1 id="spacedate"></h1>
+      
       <p><a>no events today</a></p>
     </div>
+    
     <div class="item five">
       <div class="rooms--top">
         <p> <i class="fab fa-chrome"></i> Dily Websites</p>
@@ -74,6 +82,8 @@
         </div>
       </div>
     </div>
+
+
  <div class="item six">
       <div class="reminders">
         <p><i class="fas fa-clipboard-check"></i> TO-DO LIST</p>
@@ -90,16 +100,20 @@
            </span>
         </label>
         <br> <br><br>
+          
         <label class="todo">
           <%= link_to "View lists", todo_lists_path  %> 
         </label> 
         <label class="todo">
           <%= link_to "Add new list", new_todo_list_path %> 
         </label>        
+        
       </div>
     </div>
   </div>
 </div>
+
+
 <footer>
   <p> <a target="_blank" href="">SPACE</a>♡
 </footer>

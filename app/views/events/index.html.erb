@@ -1,7 +1,0 @@
-<div class="container">
-  <% unless current_user.events.any? %>
-    <%= render "events_cta"%>
-  <% else %>
-    <%= render "events_landing", events: @events; %>
-  <% end %>
-</div>

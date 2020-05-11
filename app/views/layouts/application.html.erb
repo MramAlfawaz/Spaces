@@ -17,7 +17,12 @@
   </head>
 
 <body class="<%= controller_name %>-<%= action_name %>">
-
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
 <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="/">Space</a>
@@ -58,12 +63,7 @@
   </div>
 </nav>
 
-    <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-success"><%= alert %></p>
-    <% end %>
+
 
 
   <div class="container">

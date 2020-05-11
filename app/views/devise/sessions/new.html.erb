@@ -1,15 +1,16 @@
 
 <div class="panel panel--static">
 
-    <div style="position: relative; left: 570px; color: white">
+    <div style="position: relative; left: 560px; color: white">
         <h1 class="panel__heading">WELCOME BACK</h1>
-        <p class="panel__copy">We are HAPPY to have you back.</p></br>
-        <p class="panel__copy">DON'T HAVE AN ACCOUNT?</p>
+        <p class="panel__copy">We are HAPPY to have you back.</p><br >
+        <h1 class="panel__heading">DON'T HAVE AN ACCOUNT?</h1><br >
         <%= render "devise/shared/links" %>
     </div>
     
     <div class="panel panel--sliding">
         <div class="panel__content signup">
+        <br ><br ><br >
             <h1 class="panel__heading">Sign in</h1>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>

@@ -4,13 +4,13 @@
 
 /** [Panels] *****/
 $width-panel-static: 80%;
-$height-panel-static: 70%;
+$height-panel-static: 90%;
 $background-panel-static: rgba(0, 0, 0, 0.6);
 $color-panel-static: rgb(90, 88, 88);
 $color-panel-heading: #e26a6a;
 
 $width-panel-sliding: 50%;
-$height-panel-sliding: 110%;
+$height-panel-sliding: 120%;
 $offset-top-panel-sliding: ($height-panel-sliding - 100%) / 2;
 $offset-left-panel-sliding: 4%;
 $background-panel-sliding: #fefefe;
@@ -34,7 +34,7 @@ $size-copy: 1rem;
 /** [Base styling] *****/
 @mixin center {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -68,6 +68,8 @@ body {
     width: $width-panel-static;
     height: $height-panel-static;
     min-height: 300px;
+    max-height: 900px;
+    margin-bottom: 100px;
     background: $background-panel-static;
     color: $color-panel-static;
 

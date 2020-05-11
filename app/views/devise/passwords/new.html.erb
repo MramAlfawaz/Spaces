@@ -1,18 +1,30 @@
-<h2>Forgot your password?</h2>
 
+<div class="panel panel--static">
+
+    <div style="position: relative; left: 560px; color: white">
+        <h1 class="panel__heading">RSET PASSWORD INSTRUCTIONS</h1>
+         <p class="panel__copy">Enter the same email you signed up with.<br >We will send an E-mail to reset your password to a new one.</p>
+         <p class="panel__copy">Thank you for choosing our space. We will wait for you..</p><br >
+         <h1 class="panel__heading">OTHER OPTIONS</h1><br >
+        <%= render "devise/shared/links" %>
+    </div>
+    
+    <div class="panel panel--sliding">
+        <div class="panel__content signup">
+        <br ><br ><br ><br ><br >
+            <h1 class="panel__heading">Reset Password</h1>
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-  </div>
+       <form id="signup">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input input--email" %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
+          <%= f.button :submit, "Reset", class: "btn btn--primary" %>
+    <% end %>
+      </form>
 
-<%= render "devise/shared/links" %>
+        </div>
+            </div>    
+</div>
+

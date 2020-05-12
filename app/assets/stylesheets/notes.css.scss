@@ -1,10 +1,3 @@
-body {
-  background: #222;
-  color: #fff;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-}
-
 //------------------------------------------------ index page ---------------------------------------------------
 
 .main-content {
@@ -16,19 +9,6 @@ body {
   text-transform: uppercase;
 }
 
-h1 {
-  width: 100%;
-  margin: 0 auto 1.5em;
-  font-size: 30px;
-}
-h1 small {
-  text-transform: none;
-  display: block;
-  margin: 20px 0;
-  font: 300 20px 'QuickSand', sans-serif;
-  color: #999;
-}
-
 .moleskine-wrapper {
   max-width: calc(100% / 4);
   min-width: 10em;
@@ -38,7 +18,7 @@ h1 small {
   height: 250px;
   width: 175px;
   position: relative;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
   border-radius: 5px 15px 15px 5px;
   transform-origin: left center 0px;
   display: inline-block;
@@ -61,7 +41,7 @@ h1 small {
   position: absolute;
   border-radius: 5px 15px 15px 5px;
   z-index: 10;
-  transition: .5s linear;
+  transition: 0.5s linear;
   transform-style: preserve-3d;
   transform-origin: left center 0px;
 }
@@ -75,14 +55,36 @@ h1 small {
   border-radius: 2px;
   right: 25px;
   transition: 2s ease;
-  background: linear-gradient(to right, #9c2e2b 0%, #cc4b48 12%, #9c2e2b 25%, #cc4b48 37%, #9c2e2b 50%, #cc4b48 62%, #9c2e2b 75%, #cc4b48 87%, #9c2e2b 100%);
+  background: linear-gradient(
+    to right,
+    #9c2e2b 0%,
+    #cc4b48 12%,
+    #9c2e2b 25%,
+    #cc4b48 37%,
+    #9c2e2b 50%,
+    #cc4b48 62%,
+    #9c2e2b 75%,
+    #cc4b48 87%,
+    #9c2e2b 100%
+  );
 }
 
 .notebook-cover.green {
-  background: #abc3b5;
+  background: #b7cee8;
 }
 .notebook-cover.green:before {
-  background: linear-gradient(to right, #7ea38e 0%, #abc3b5 12%, #7ea38e 25%, #abc3b5 37%, #7ea38e 50%, #abc3b5 62%, #7ea38e 75%, #abc3b5 87%, #7ea38e 100%);
+  background: linear-gradient(
+    to right,
+    #7ea38e 0%,
+    #abc3b5 12%,
+    #7ea38e 25%,
+    #abc3b5 37%,
+    #7ea38e 50%,
+    #abc3b5 62%,
+    #7ea38e 75%,
+    #abc3b5 87%,
+    #7ea38e 100%
+  );
 }
 
 .notebook-skin {
@@ -98,7 +100,7 @@ h1 small {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .notebook-skin:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 15px;
@@ -121,48 +123,97 @@ h1 small {
   background-size: 100% 10px;
 }
 .notebook-page.squared {
-  background-image: linear-gradient(#e4e4e4 1px, transparent 1px), linear-gradient(90deg, #e4e4e4 1px, transparent 1px);
+  background-image: linear-gradient(#e4e4e4 1px, transparent 1px),
+    linear-gradient(90deg, #e4e4e4 1px, transparent 1px);
   background-size: 10px 10px, 10px 10px, 2px 2px, 2px 2px;
 }
 .notebook-page.dotted {
-  background: linear-gradient(90deg, #fbfae8 10px, transparent 1%) center, linear-gradient(#fbfae8 10px, transparent 1%) center, #999;
+  background: linear-gradient(90deg, #fbfae8 10px, transparent 1%) center,
+    linear-gradient(#fbfae8 10px, transparent 1%) center, #999;
   background-size: 11px 11px;
 }
 
 //------------------------------------------------ show page ---------------------------------------------------
 
-.container {
+.note-show-container {
   margin-bottom: 5rem;
   text-align: center;
 }
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand+SC");
 
-header {
-  margin-top: 3rem;
-  padding-bottom: 3rem;
-}
-header h1 {
-  font-family: "Courgette";
-  color: rgba(30, 144, 255, 0.6);
-  font-size: 40px;
-}
-header h1 span {
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+
+#notebook-paper {
+  width: 900px;
+  height: 100%;
+  background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
+  margin: 50px auto;
+  background-size: 100% 30px;
   position: relative;
-  padding-bottom: 2.5rem;
-}
-header h1 span::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-bottom: 3px dotted #dedede;
+  padding-top: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2),
+    0px 0px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2),
+    0px 0px 6px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 140px;
+    height: 100%;
+    width: 1px;
+    background: #db4034;
+  }
+
+  #content {
+    margin-top: 50px;
+    font-size: 3vw;
+    line-height: 30px;
+    p {
+      margin: 0 0 30px 0;
+    }
+  }
 }
 
+.button-container1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.button-container2 {
+	display: flex;
+    flex-direction: row;
+	margin: auto;
+}
+
+.note-button {
+  text-align: center;
+  background-color: #c94468;
+  border-radius: 4px;
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+// pencil part
 .wrap-pencil {
   display: inline-block;
-  margin-top: 2rem;
+  padding-top: 0;
+  padding-bottom: 7%;
 }
 
 .pencil-tip {
@@ -201,10 +252,10 @@ header h1 span::before {
   z-index: 2;
   float: left;
   position: relative;
-  width: 450px;
+  width: 650px;
   height: 30px;
   padding-right: 10px;
-  background: purple;
+  background: #b7cee8;
   text-align: right;
 }
 .pencil-body span {
@@ -250,7 +301,7 @@ header h1 span::before {
   position: relative;
   width: 15px;
   height: 30px;
-  background: #C94468;
+  background: #c94468;
   border-radius: 0 5px 5px 0;
   overflow: hidden;
 }
@@ -276,22 +327,3 @@ header h1 span::before {
   border-radius: 50%;
   opacity: 0.15;
 }
-
-.dummy-text {
-  margin-top: 4rem;
-  text-align: center;
-}
-.dummy-text p {
-  margin-bottom: 3rem;
-}
-
-.wrap-asterisk {
-  text-align: center;
-  margin: 5rem 0;
-}
-.wrap-asterisk i {
-  font-size: 1.2em;
-  margin: 0 0.8rem;
-  color: rgba(30, 144, 255, 0.4);
-}
-

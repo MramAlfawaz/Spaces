@@ -1,14 +1,8 @@
-// body {
-//   background: #222;
-//   color: #fff;
-//   font-family: 'Quicksand', sans-serif;
-//   font-size: 18px;
-// }
 
 //------------------------------------------------ index page ---------------------------------------------------
 
 .main-content {
-  margin: 5em auto;
+  margin: 3em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,6 +22,7 @@ h1 small {
   font: 300 20px "QuickSand", sans-serif;
   color: #999;
 }
+
 
 .moleskine-wrapper {
   max-width: calc(100% / 4);
@@ -90,7 +85,7 @@ h1 small {
 }
 
 .notebook-cover.green {
-  background: #abc3b5;
+  background: #b7cee8;
 }
 .notebook-cover.green:before {
   background: linear-gradient(
@@ -119,6 +114,7 @@ h1 small {
   text-align: left;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+
 .notebook-skin:before {
   content: "";
   position: absolute;
@@ -155,25 +151,82 @@ h1 small {
 
 //------------------------------------------------ show page ---------------------------------------------------
 
-// .container {
-//   margin-bottom: 5rem;
-//   // text-align: center;
-// }
+.note-show-container {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand+SC");
 
-header {
-  margin-top: 3rem;
-  padding-bottom: 3rem;
-}
-header h1 {
-  font-family: "Courgette";
-  color: rgba(30, 144, 255, 0.6);
-  font-size: 40px;
-}
-header h1 span {
+
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+
+#notebook-paper {
+  width: 900px;
+  height: 100%;
+  background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
+  margin: 50px auto;
+  background-size: 100% 30px;
   position: relative;
-  padding-bottom: 2.5rem;
+  padding-top: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2),
+    0px 0px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2),
+    0px 0px 6px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 140px;
+    height: 100%;
+    width: 1px;
+    background: #db4034;
+  }
+
+  #content {
+    margin-top: 50px;
+    font-size: 3vw;
+    line-height: 30px;
+    p {
+      margin: 0 0 30px 0;
+    }
+  }
 }
-header h1 span::before {
+
+.button-container1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.button-container2 {
+	display: flex;
+    flex-direction: row;
+	margin: auto;
+}
+
+.note-button {
+  text-align: center;
+  background-color: #c94468;
+  border-radius: 4px;
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+  header h1 span::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -184,9 +237,11 @@ header h1 span::before {
   border-bottom: 3px dotted #dedede;
 }
 
+// pencil part
 .wrap-pencil {
   display: inline-block;
-  margin-top: 2rem;
+  padding-top: 0;
+  padding-bottom: 7%;
 }
 
 .pencil-tip {
@@ -225,10 +280,10 @@ header h1 span::before {
   z-index: 2;
   float: left;
   position: relative;
-  width: 450px;
+  width: 650px;
   height: 30px;
   padding-right: 10px;
-  background: purple;
+  background: #b7cee8;
   text-align: right;
 }
 .pencil-body span {
@@ -301,20 +356,76 @@ header h1 span::before {
   opacity: 0.15;
 }
 
-.dummy-text {
-  margin-top: 4rem;
+
+//------------------------------------------------ form page ---------------------------------------------------
+
+
+$white_opaque: rgba(250, 250, 250, .3);
+$dark: #1F7972;
+
+.notes-form-container {
+	width: 60%;
+	max-width: 750px;
+	background: $white_opaque;
+	margin: 0 auto 1em auto;
+	border-radius: 7px;
+	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+	box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+  padding: 2em ;
   text-align: center;
 }
-.dummy-text p {
-  margin-bottom: 3rem;
+.note_title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: white;
+	margin: 0;
+	a {
+		text-decoration: none;
+		color: white;
+		transition: all .4s ease-in-out;
+		&:hover {
+			opacity: 0.4;
+		}
+	}
 }
 
-.wrap-asterisk {
-  text-align: center;
-  margin: 5rem 0;
+
+.forms {
+	padding: 0 5%;
 }
-.wrap-asterisk i {
-  font-size: 1.2em;
-  margin: 0 0.8rem;
-  color: rgba(30, 144, 255, 0.4);
+label {
+	color: $dark;
 }
+input[type="text"], trix-editor {
+	width: 90%;
+	margin: .5em 2% 1em 0;
+	display: inline-block;
+	outline: none;
+	background: rgba(250,250,250,.4);
+	border: none;
+	height: 40px;
+	border-radius: 4px;
+	padding: 1em 2em;
+}
+trix-editor {
+	height: 200px;
+}
+input[type="submit"] {
+	background: white;
+	outline: none;
+	border: none;
+	height: 40px;
+	border-radius: 4px;
+	width: 25%;
+	display: inline-block;
+	transition: all .4s ease-in-out;
+	cursor: pointer;
+	color: $dark;
+	&:hover {
+		background: $dark;
+		color: white;
+	}
+}
+

@@ -33,10 +33,12 @@ function uploadAttachment(attachment) {
       var data = JSON.parse(xhr.responseText);
       return attachment.setAttributes({
         url: data.image_url,
-        href: data.image_url,
+        href: data.imge_url,
       });
     }
   };
 
   return xhr.send(form);
 }
+
+

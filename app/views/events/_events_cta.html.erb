@@ -1,4 +1,11 @@
+<%# if the user have no Events %>
 <div class="container">
-  <h1>It looks like haven't scheduled any events yet!</h1>
-  <%= link_to "Schedule a New Event", new_event_path %>
+  <div class="icon calendar">
+    <i></i>
+    <i></i>
+  </div>
+  <div class="noEvents">
+  <h3>It looks like you haven't scheduled any events yet!</h3><br>
+  <%= link_to "Schedule a New Event", new_event_path, class: "btn btn-success" %>
+  </div>
 </div>

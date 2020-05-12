@@ -107,16 +107,16 @@ p {
   letter-spacing: 2px;
   font-size: 0.8em;
 }
-a {
-  cursor: pointer;
-  padding: 3px;
-  font-family: $font;
-  &:hover {
-    background: $pale;
-    color: $white;
-    transition: $ease;
-  }
-}
+// a {
+//   cursor: pointer;
+//   padding: 3px;
+//   font-family: $font;
+//   &:hover {
+//     background: $pale;
+//     color: $white;
+//     transition: $ease;
+//   }
+// }
 .timespace {
   font-size: 1.8em;
   font-family: $mono;

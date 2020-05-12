@@ -1,3 +1,4 @@
+<%# rdirect user depends on if he have any event or not %>
 <div class="container">
   <% unless current_user.events.any? %>
     <%= render "events_cta"%>

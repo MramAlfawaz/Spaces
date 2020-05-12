@@ -12,24 +12,14 @@ $white: #ffffff;
 $font: "Raleway", sans-serif;
 $mono: "PT Mono", monospace;
 $ease: all 0.3s ease;
-body {
-  background-color: $light;
-}
-.color-box {
-  position: absolute;
-  display: flex;
-  width: 250px;
-  height: 50px;
-  bottom: 0;
-  right: 0;
-  font-size: 12px;
-  margin: 8px;
-}
+
+
+
 #dashboard-container {
   position: relative;
   margin: 0 auto;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: 700px;
   border: 1px solid $light;
   background-color: $white;
 }
@@ -48,7 +38,7 @@ body {
   flex-direction: column;
   align-items: center;
   p {
-    color: $dark;
+    color: white;
     font-size: 0.8em;
     margin-top: 15px;
   }
@@ -62,70 +52,141 @@ body {
     color: $white;
     font-size: 1.7em;
     margin: 0;
-    margin-top: 12px;
+    margin-top: 9px;
   }
 }
+
 li {
   list-style-type: none;
   color: $dark;
-  margin: 0;
-  padding: 15px;
+  padding: 10px;
   text-transform: uppercase;
-  font-size: 0.8em;
   letter-spacing: 1px;
   cursor: pointer;
   &:hover {
     background: $white;
     color: $navy;
     transition: $ease;
+    text-decoration: none;
   }
 }
-.active {
-  background: $pale;
-  color: $white;
-  width: 250px;
-  margin-left: -10px;
-  box-shadow: 1px 1px 3px rgba($dark, 0.3);
-  transition: $ease;
+
+// .active {
+//   background: $pale;
+//   color: $white;
+//   width: 250px;
+//   margin-left: -10px;
+//   box-shadow: 1px 1px 3px rgba($dark, 0.3);
+//   transition: $ease;
+//   &:hover {
+//     background: $white;
+//     color: $dark;
+//     transition: $ease;
+//   }
+// }
+
+
+
+
+// p {
+//   color: $navy;
+//   margin: 0;
+//   text-transform: uppercase;
+//   letter-spacing: 2px;
+//   font-size: 0.8em;
+// }
+
+
+.navside {
+  cursor: pointer;
+  padding: 3px;
+  font-family: $font;
+  color: $navy;
+  
   &:hover {
-    background: $white;
-    color: $dark;
+    background: $pale;
+    color: $navy;
     transition: $ease;
+    text-decoration: none;
   }
 }
-h1 {
+
+.navsidelist{
+  cursor: pointer;
+  padding: 3px;
+  font-family: $font;
+  color: $navy;
+  
+  &:hover {
+    color: $white;
+    transition: $ease;
+    font-size: 17px;
+    text-decoration: none;
+  }
+}
+
+.navsideweb{
+   cursor: pointer;
+  padding: 3px;
+  font-family: $font;
+  color: $navy;
+  &:hover {
+    color: $black;
+    transition: $ease;
+    font-size: 17px;
+    text-decoration: none;
+  }
+}
+
+.navsidenote {
+  cursor: pointer;
+  padding: 3px;
+  font-family: $font;
+  color: $navy;
+  
+  &:hover {
+    color: $dark;
+    font-size: 17px;
+    transition: $ease;
+    text-decoration: none;
+  }
+}
+
+
+
+.timespace {
   margin: 0;
   font-size: 1.15em;
   color: $white;
   letter-spacing: 2px;
   text-transform: uppercase;
-}
-p {
-  color: $navy;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8em;
-}
-a {
-  cursor: pointer;
-  padding: 3px;
-  font-family: $font;
-  &:hover {
-    background: $pale;
-    color: $white;
-    transition: $ease;
-  }
-}
-.timespace {
-  font-size: 1.8em;
   font-family: $mono;
-  margin-top: -30px;
-  margin-bottom: 25px;
+  text-align: center;
   color: $pale;
   background: $white;
-  padding: 7px;
+  padding: 5px;
 }
+
+.timespace2 {
+color: $white;
+font-size: 2.3em;
+text-align: center;
+margin-top: 10px;
+margin-left: 10px;
+i {
+  font-size: 0.7em;
+  margin-left: -10px;
+}
+}
+
+#spacedate {
+  color: $navy;
+  font-family: $mono;
+  font-size: 1.3em;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
 .main-grid {
   margin-top: 3.5%;
   width: 70%;
@@ -156,43 +217,16 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  p {
-    margin-bottom: -40px;
-  }
+ 
 }
-//music player
+
+// for time box 
 .two {
   grid-area: two;
   grid-column: 1;
 }
-.music {
-  color: $pale;
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-bottom: -10px;
-}
-.info {
-  height: 5px;
-  width: 100%;
-  margin-bottom: -40px;
-  background: rgba($white, 0.85);
-  transform: translateY(35px);
-  transition: all 0.5s ease-in-out;
-}
-.progress-bar {
-  height: 5px;
-  width: 70%;
-  margin: 6% auto;
-  background: lighten($light, 5%);
-  border-radius: 10px;
-  font-family: $font;
-}
-.fill {
-  background-color: $pale;
-  width: 40%;
-  height: 0.3rem;
-  border-radius: 2px;
-}
+
+
 .time--current,
 .time--total {
   color: $dark;
@@ -275,17 +309,7 @@ a {
   grid-column: 1;
   background: $light;
 }
-h2 {
-  color: $white;
-  font-size: 2.3em;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: -20px;
-  i {
-    font-size: 0.7em;
-    margin-left: -10px;
-  }
-}
+
 .weather {
   text-align: center;
   margin-top: 30px;
@@ -309,26 +333,21 @@ h2 {
     margin-top: 8px;
   }
 }
-#spacedate {
-  color: $navy;
-  font-family: $mono;
-  font-size: 1.3em;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
+
 //rooms
 .five {
   grid-area: five;
   grid-column: 2;
 }
-.rooms--top {
-  margin: 20px;
-}
+
 .rooms {
   margin-bottom: -55px;
 }
+
+//dily list
 .rooms--btns {
   margin-top: 30px;
+  margin-left: 15px;
 }
 /*toggle button*/
 .toggle {
@@ -415,20 +434,35 @@ h2 {
   margin-top: 15px;
   margin-bottom: -60px;
 }
+
+// note part
+
+
+.note {
+  color: $navy;
+  margin-top: 20px;
+  margin-left: 15PX;
+
+}
+
+.info {
+  height: 5px;
+  width: 100%;
+  background: rgba($white, 0.85);
+  margin-left: 15px;
+}
+
 .todo {
   cursor: pointer;
   display: inline-block;
-  margin-left: 90px;
 }
-.todonote {
-  margin-left: 30px;
-}
+
 .todo-switch {
   display: inline-block;
   background: $white;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   position: relative;
   transition: background 0.25s;
   &:before,
@@ -436,24 +470,14 @@ h2 {
     content: "";
     color: $white;
   }
-  .todo-checkbox:checked + & {
-    background: $navy;
-    &:before {
-      content: "\2713";
-      color: $white;
-      font-size: 1.3em;
-      transition: $ease;
-      position: absolute;
-      top: -10px;
-    }
-  }
+  
 }
 .todo-switch1 {
   display: inline-block;
   background: $navy;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   position: relative;
   transition: background 0.25s;
   &:before,
@@ -478,32 +502,8 @@ h2 {
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  position: relative;
   color: $white;
   text-transform: none;
 }
-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  font-size: 1em;
-  text-transform: uppercase;
-  padding: 10px;
-  p {
-    text-transform: uppercase;
-    color: $navy;
-    font-family: $font;
-    letter-spacing: 3px;
-  }
-  a {
-    font-family: $font;
-    text-transform: uppercase;
-    color: $dark;
-    text-decoration: none;
-    &:hover {
-      color: $pale;
-      background: $white;
-    }
-  }
-}
+
+

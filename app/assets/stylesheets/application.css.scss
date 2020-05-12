@@ -1,6 +1,6 @@
 /*
-    *= require simple_calendar
     *= require trix
+    *= require simple_calendar
     *= require_tree
     *= require_self
 */
@@ -10,29 +10,61 @@
 // @import "bootstrap.css";
 // @import "bootstrap-sprockets";
 // @import "bootstrap";
-
 // // @import "normalize";
 // // @import "global.css.scss";
-// @import "notes.css.scss";
-// @import "welcome.css.scss";
-// // @import "favorites.css.scss";
 
-.spaceh1 {
-  font-size: 40px;
-  color: white;
+
+$navy: #577399;
+$light: #d8dbe2;
+$pale: #b7cee8;
+$navy: #577399;
+$dark: #495867;
+$white: #ffffff;
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap");
+$font: "Raleway", sans-serif;
+
+
+.spacefooter {
+  margin-bottom: 0;
+  margin-right: 0;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px;
+  p {
+    text-transform: uppercase;
+    color: $navy;
+    font-family: $font;
+    letter-spacing: 3px;
+  }
+  .navside {
+    font-family: $font;
+    text-transform: uppercase;
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      color: $pale;
+      background: $white;
+    }
+  }
 }
 
-.spaceitem {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
+// .spaceh1 {
+//   font-size: 40px;
+//   color: white;
+// }
 
-.spaceul {
-  list-style: none;
-}
+// .spaceitem {
+//   color: white;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
 
-.spaceh1weather {
-  font-size: 35px;
-  color: white;
-}
+// .spaceul {
+//   list-style: none;
+// }
+
+// .spaceh1weather {
+//   font-size: 35px;
+//   color: white;
+// }

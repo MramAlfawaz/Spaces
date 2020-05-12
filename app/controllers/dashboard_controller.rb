@@ -1,8 +1,8 @@
 class DashboardController < ApplicationController
   def space
-    @favorites = Favorite.where(user_id: current_user)
-    @notes = Note.where(user_id: current_user)
-    @todo_lists = TodoList.where(user_id: current_user)
+    @favorites = Favorite.all.order('created_at DESC').limit(2)
+    @notes = Note.all.order('created_at DESC').limit(2)
+    @todo_lists = TodoList.all.order('created_at DESC').limit(2)
 
   end
 end

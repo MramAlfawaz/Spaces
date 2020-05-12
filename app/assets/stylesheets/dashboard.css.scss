@@ -11,7 +11,7 @@
 
 $black: #455A64;
 $light: #EEEEEE;
-$pale: #FFAB00;
+$pale: #4CB8C4;
 $navy: #37474F;
 $dark: #263238;
 $white: #ffffff;
@@ -68,7 +68,7 @@ body {
 
 li {
   list-style-type: none;
-  color: $dark;
+  // color: $dark;
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -246,9 +246,9 @@ margin-top: 10px;
     font-size: 0.7em;
   }
 }
-.city {
-  color: $dark;
-}
+// .city {
+//   color: $dark;
+// }
 //game
 .four {
   grid-area: four;

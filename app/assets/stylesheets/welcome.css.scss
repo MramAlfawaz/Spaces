@@ -3,10 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 // .welcome-index
 
-
-// Imports
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700);
-
 // Mixin
 @mixin v-align {
   position: relative;
@@ -17,9 +13,9 @@
 }
 
 // Variables
-$primary: #2196F3;
-$font-family: 'Roboto', sans-serif;
-$depth: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$primary: #2196f3;
+$font-family: "Roboto", sans-serif;
+$depth: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 // Code
 .indexcontainer {
@@ -43,35 +39,32 @@ $depth: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-top: 1px solid #eeeeee;
 }
 
-
-.indexweather{
-    float: right;
-    margin-top: 1px;
-    color: rgb(255, 255, 255);  
+.indexweather {
+  float: right;
+  margin-top: 1px;
+  color: rgb(255, 255, 255);
 }
 
-.ttext{
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    display: inline;
-    justify-content: center; 
+.ttext {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  display: inline;
+  justify-content: center;
 }
 .quote {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 70px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 70px;
 }
 
 // nav part
 
 header,
-.landnav
-{
+.landnav {
   display: block;
 }
-
 
 audio:not([controls]) {
   display: none;
@@ -83,11 +76,8 @@ a {
   background-color: transparent;
 }
 
-
-
 header,
-.landnav
- {
+.landnav {
   width: 100%;
   word-wrap: break-word;
 }
@@ -98,11 +88,11 @@ header,
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
   position: relative;
 }
 
@@ -114,17 +104,14 @@ header,
   font-weight: bold;
   color: white;
   border-radius: 4px;
-  background-color: #e5e7eb;;
+  background-color: black;
 }
 
 .landnav[am-layout][am-layout~="horizontal"] a {
-  -webkit-flex:  4.3333%;
-      -ms-flex:  4.3333%;
-          flex:  4.3333%;
+  -webkit-flex: 4.3333%;
+  -ms-flex: 4.3333%;
+  flex: 4.3333%;
 }
-
-
-
 
 .landnav[am-layout] a:not(.am-floating-action) {
   padding: 1em;
@@ -132,12 +119,12 @@ header,
   text-decoration: none;
 }
 
- header {
+header {
   font-size: 112.5%;
   line-height: 1.65;
-  color:white;
+  color: white;
 }
 
- header a{
+header a {
   color: white;
 }

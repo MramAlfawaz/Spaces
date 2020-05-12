@@ -2,18 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 // .dashboard-space
-$black: #252021;
-$light: #d8dbe2;
-$pale: #b7cee8;
-$navy: #577399;
-$dark: #495867;
+// $black: #252021;
+// $light: #d8dbe2;
+// $pale: #b7cee8;
+// $navy: #577399;
+// $dark: #495867;
+// $white: #ffffff;
+
+$black: #455A64;
+$light: #EEEEEE;
+$pale: #FFAB00;
+$navy: #37474F;
+$dark: #263238;
 $white: #ffffff;
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap");
 $font: "Raleway", sans-serif;
 $mono: "PT Mono", monospace;
 $ease: all 0.3s ease;
 
-
+body {
+  background-color: $light;
+}
 
 #dashboard-container {
   position: relative;
@@ -169,14 +179,8 @@ li {
 
 .timespace2 {
 color: $white;
-font-size: 2.3em;
 text-align: center;
 margin-top: 10px;
-margin-left: 10px;
-i {
-  font-size: 0.7em;
-  margin-left: -10px;
-}
 }
 
 #spacedate {
@@ -227,82 +231,6 @@ i {
 }
 
 
-.time--current,
-.time--total {
-  color: $dark;
-  font-size: 10px;
-  position: absolute;
-  margin-top: -4px;
-}
-.time--current {
-  left: 15px;
-}
-.time--total {
-  right: 15px;
-}
-.currently-playing {
-  text-align: center;
-  margin-top: -3px;
-}
-.song-name,
-.artist-name {
-  font-family: $font;
-  text-transform: uppercase;
-  margin: 0;
-}
-.song-name {
-  font-size: 0.8em;
-  letter-spacing: 3px;
-  color: $dark;
-}
-.artist-name {
-  font-size: 0.6em;
-  letter-spacing: 1.5px;
-  color: lighten($dark, 15%);
-  margin-top: 5px;
-}
-.controls {
-  display: flex;
-  align-items: center;
-  font-size: 0.8em;
-  justify-content: center;
-  color: $pale;
-  cursor: pointer;
-  .play {
-    margin: 15px 20px;
-    color: darken($pale, 10%);
-  }
-  .option {
-    left: 10px;
-    position: absolute;
-    font-size: 0.8em;
-  }
-  .add {
-    right: 10px;
-    position: absolute;
-    font-size: 0.8em;
-  }
-  .volume {
-    margin-right: 30px;
-    font-size: 0.8em;
-  }
-  .shuffle {
-    margin-left: 30px;
-    font-size: 0.8em;
-  }
-}
-.play,
-.next,
-.previous,
-.option,
-.add,
-.volume,
-.shuffle {
-  transition: all 0.5s ease;
-  &:hover {
-    color: lighten($dark, 15%);
-  }
-}
 //weather
 .three {
   grid-area: three;
@@ -321,7 +249,7 @@ i {
 .city {
   color: $dark;
 }
-//calendar
+//game
 .four {
   grid-area: four;
   grid-column: 2;
@@ -349,94 +277,22 @@ i {
   margin-top: 30px;
   margin-left: 15px;
 }
-/*toggle button*/
-.toggle {
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 13px;
-}
-.toggle-switch {
-  display: inline-block;
-  background: $light;
-  border-radius: 16px;
-  margin-left: 20px;
-  width: 40px;
-  height: 21px;
-  position: relative;
-  vertical-align: middle;
-  transition: background 0.25s;
-  &:before,
-  &:after {
-    content: "";
-  }
-  &:before {
-    display: block;
-    background: linear-gradient(to bottom, $white 0%, #eee 100%);
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: left 0.25s;
-  }
-  .toggle:hover &:before {
-    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-  }
-  .toggle-checkbox:checked + & {
-    background: $pale;
-    &:before {
-      left: 20px;
-    }
-  }
-}
-.toggle-checkbox {
-  position: absolute;
-  visibility: hidden;
-}
-.toggle-label {
-  font-size: 0.8em;
-  margin-left: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  top: 2px;
-}
+
+
 .six {
   grid-area: six;
   grid-column: 2;
   background: $pale;
 }
-.reminders {
-  display: flex;
-  position: relative;
-  p {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-}
-.reminder--btns {
-  position: absolute;
-  right: 18px;
-  top: 17px;
-  i {
-    color: $white;
-    cursor: pointer;
-    &:hover {
-      color: $navy;
-      transition: $ease;
-    }
-  }
-}
+
+
 .reminders--list {
-  margin-top: 15px;
-  margin-bottom: -60px;
+  
+  margin-top: 25px;
+  margin-bottom: -70px;
 }
 
 // note part
-
 
 .note {
   color: $navy;
@@ -452,58 +308,74 @@ i {
   margin-left: 15px;
 }
 
-.todo {
-  cursor: pointer;
-  display: inline-block;
-}
-
-.todo-switch {
-  display: inline-block;
-  background: $white;
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  position: relative;
-  transition: background 0.25s;
-  &:before,
-  &:after {
-    content: "";
-    color: $white;
-  }
-  
-}
 .todo-switch1 {
   display: inline-block;
   background: $navy;
   border-radius: 50%;
   width: 5px;
   height: 5px;
-  position: relative;
-  transition: background 0.25s;
-  &:before,
-  &:after {
-    content: "";
-    color: $white;
-  }
-  .todo-checkbox:checked + & {
-    background: $navy;
-    &:before {
-      content: "\2713";
-      color: $white;
-      font-size: 1.3em;
-      transition: $ease;
-      position: absolute;
-      top: -10px;
-    }
-  }
 }
-.todo-label {
-  font-family: $font;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+
+
+// game
+
+.flip-container {
+  perspective: 1000;
+  margin: 10px;
+  float: left;
+}
+/* turning on hover */
+
+
+
+.flip-container,
+.front,
+.front a i,
+.back {
   color: $white;
-  text-transform: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+}
+/* flipping speed here */
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* making the the other side hidden while flipping */
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* front side is in front of a back side */
+
+.front {
+  z-index: 2;
+  background-color: $dark;
+  color: white;
+}
+/* back side */
+
+.back {
+  transform: rotateY(180deg);
+  background-color: lightblue;
 }
 
-
+.back p {
+  font-size: 18px;
+  margin-top: 0px;
+  font-family: 'Kaushan Script', cursive;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: #333;
+  color: white;
+}

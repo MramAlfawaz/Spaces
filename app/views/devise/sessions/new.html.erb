@@ -23,8 +23,8 @@
 
                 <%= f.label :password %><br />
                 <%= f.password_field :password, autocomplete: "current-password", class: "input input--password" %>
-                <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-                <%= f.button :submit, "Log in", class: "btn btn--primary" %>
+                <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %><br>
+                <%= f.button :submit, "Sign in", class: "submitDark" %>
             <% end %>
             </form>
         </div>

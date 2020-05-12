@@ -43,7 +43,7 @@ const icons = {
   
 
 //     //api of images
-fetch(`https://source.unsplash.com/1600x900/?cloud`).then((response) => {   
+fetch(`https://source.unsplash.com/1600x900/?trees`).then((response) => {   
        
     document.body.style.backgroundImage = `url("${response.url}")`;
     document.body.style.backgroundRepeat= "no-repeat";

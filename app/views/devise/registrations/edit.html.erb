@@ -1,49 +1,51 @@
 
-<div class="panel panel--static" style="height: 500px">
-
- <div style="position: relative; left: 560px; color: white">
+<div class="panel panel--static" style="height: 600px">
+    <%# Options Section %>
+    <div style="position: relative; left: 560px; color: white">
         <h1 class="panel__heading">Delete my account</h1>
-        <p class="panel__copy">Unhappy? <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure you want to delete your account?" }, method: :delete %></p><br />
+        <p class="panel__copy">Don't Leave us! :( <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure you want to delete your account?" }, method: :delete %></p><br />
         <p class="panel__copy"><%= link_to "Back", :back %></p>
     </div>
 
+    <%# Update Profile Section %>
     <div class="panel panel--sliding">
         <div class="panel__content signup">
-            <h1 class="panel__heading">Edit <%= resource_name.to_s.humanize %></h1>
+          <h1 class="panel__heading">Edit <%= resource_name.to_s.humanize %></h1>
 
-            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-             <%= f.error_notification %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%# Error Messages %>
+            <%= f.error_notification %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <%# Form %>
+            <form id="signup">
+                <%= f.label :name %><br />
+                <%= f.text_field :name, autofocus: true, class: "input input--name" %>
 
-       <form id="signup">
-          <%= f.label :name %><br />
-          <%= f.text_field :name, autofocus: true, class: "input input--name" %>
+                <%= f.label :email %><br />
+                <%= f.email_field :email, required: true, autofocus: true, class: "input input--email" %>
 
-           <%= f.label :email %><br />
-           <%= f.email_field :email, required: true, autofocus: true, class: "input input--email" %>
+                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                  <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                <% end %>
 
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-          <% end %>
+                <%= f.label :password %><span style="color: red;"> leave it blank if you don't want to change it</span><br />
+                  <%= f.password_field :password,
+                              required: false, class: "input input--password",
+                              input_html: { autocomplete: "new-password" } %>
 
-          <%= f.label :password %><span> "leave it blank if you don't want to change it"</span><br />
-            <%= f.password_field :password,
-                        hint: "leave it blank if you don't want to change it",
-                        required: false, class: "input input--password",
-                        input_html: { autocomplete: "new-password" } %>
+                  <%= f.label :password_confirmation %><span style="color: red;"> leave it blank if you don't want to change it</span><br />
+                  <%= f.password_field :password_confirmation,
+                              required: false, class: "input input--password",
+                              input_html: { autocomplete: "new-password" } %>
 
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation,
-                        required: false, class: "input input--password",
-                        input_html: { autocomplete: "new-password" } %>
-
-            <%= f.label :current_password %><span> "we need your current password to confirm your changes"</span><br />
-            <%= f.password_field :current_password,
-                        hint: "we need your current password to confirm your changes",
-                        required: true, class: "input input--password",
-                        input_html: { autocomplete: "current-password" } %>
-                  <%= f.button :submit, "Update", class: "btn btn--primary" %>
-            <% end %>
-              </form>
+                  <%= f.label :current_password %><span style="color: red;"> we need your current password to confirm your changes</span><br />
+                  <%= f.password_field :current_password,
+                              hint: "we need your current password to confirm your changes",
+                              required: true, class: "input input--password",
+                              input_html: { autocomplete: "current-password" } %>
+                        <%= f.button :submit, "Update", class: "btn btn--primary" %>
+                  <% end %>
+                    </form>
                 </div>
                     </div>    
         </div>

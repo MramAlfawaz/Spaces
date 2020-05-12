@@ -28,7 +28,7 @@
 
   <div id="content">
     <div class="hipsum">
-       <p><%= sanitize @note.content %></p> 
+       <p><%= @note.content.html_safe %></p> 
     </div>
 </div>
 

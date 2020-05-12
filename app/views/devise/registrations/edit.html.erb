@@ -1,7 +1,7 @@
 
 <div class="panel panel--static" style="height: 500px">
 
- <div style="position: relative; left: 570px; color: white">
+ <div style="position: relative; left: 560px; color: white">
         <h1 class="panel__heading">Delete my account</h1>
         <p class="panel__copy">Unhappy? <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure you want to delete your account?" }, method: :delete %></p><br />
         <p class="panel__copy"><%= link_to "Back", :back %></p>
@@ -25,7 +25,7 @@
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
 
-          <%= f.label :password%><span> "leave it blank if you don't want to change it"</span><br />
+          <%= f.label :password %><span> "leave it blank if you don't want to change it"</span><br />
             <%= f.password_field :password,
                         hint: "leave it blank if you don't want to change it",
                         required: false, class: "input input--password",

@@ -1,8 +1,6 @@
 $(function() {
 
-  // =====================================
 // Get Date
-// =====================================
 var date = new Date(),
 year = date.getFullYear(),
 month = date.getMonth(),
@@ -11,10 +9,7 @@ months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oc
 
 document.getElementById('daymonthyear').innerHTML = day + " " + months[month] + " " + year;
 
-// =====================================
 // Get Time
-// =====================================
-
 function addZero(i) {
 // This checks to see if the number is below 10 and then prepends a '0' - clever shit :P
 if (i < 10) {

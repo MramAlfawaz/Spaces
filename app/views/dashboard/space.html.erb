@@ -7,11 +7,11 @@
 
     <div class="avatar">
       <% if user_signed_in? %> 
-         <div class="icon"><p><%= current_user.name.first() %></p></div>
-         <p> HELLO, <%= current_user.name.upcase %> </p>
+         <div class="iconspace"><p><%= current_user.name.first() %></p></div>
+         <p class="iconp"> HELLO, <%= current_user.name.upcase %> </p>
        <% else %>
-         <div class="icon"><p></p></div>
-         <p> Hello </p>
+         <div class="iconspace"><p></p></div>
+         <p > Hello </p>
       <% end %>
     </div>
 
@@ -61,7 +61,7 @@
     <div class="item three">
       <div class="weather">
       <br>
-        <i class="fas fa-5x fa-calendar-alt"></i>
+        <i class="fas fa-7x fa-calendar-alt"></i>
               <br><br>
         
         <%= link_to "CALENDER", events_path, class: "navside" %>

@@ -1,6 +1,6 @@
 
 <div class="panel panel--static">
-
+    <%# Welcome Section %>
     <div style="position: relative; left: 560px; color: white">
         <h1 class="panel__heading">HELLO & WELCOME</h1>
         <p class="panel__copy">We are HAPPY to have you here <br>You will ENJOY this experince.</p><br><br>
@@ -9,13 +9,14 @@
          
     </div>
     
-    
+    <%# Sign up Section %>
     <div class="panel panel--sliding">
         <div class="panel__content signup">
-            <h1 class="panel__heading">Sign up</h1>
-             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <h1 class="panel__heading">Sign up</h1>
+           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+           <%# Error Messages %>
            <%= render "devise/shared/error_messages", resource: resource %>
-
+           <%# Form %>
             <form id="signup">
                    <%= f.label :name %><br />
                     <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "input input--name"  %> 
@@ -30,12 +31,10 @@
                     <%= f.password_field :password, autocomplete: "new-password", class: "input input--password" %>
 
                     <%= f.label :password_confirmation %><br />
-                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input input--password" %>   
-                    <%= f.submit "Sign up", class: "btn btn--primary"%> 
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input input--password" %><br> <br>  
+                    <%= f.submit "Sign up", class: "submitDark" %> 
                <% end %>
             </form>
-
         </div>
-
     </div>    
 </div>

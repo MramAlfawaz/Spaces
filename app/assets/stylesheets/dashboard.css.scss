@@ -9,10 +9,10 @@
 // $dark: #495867;
 // $white: #ffffff;
 
-$black: #455A64;
-$light: #EEEEEE;
-$pale: #4CB8C4;
-$navy: #37474F;
+$black: #455a64;
+$light: #eeeeee;
+$pale: #a4e1e7;
+$navy: #37474f;
 $dark: #263238;
 $white: #ffffff;
 
@@ -53,17 +53,21 @@ body {
     margin-top: 15px;
   }
 }
-.icon {
+.iconspace {
   width: 55px;
   height: 55px;
   background: $pale;
   border-radius: 50%;
   p {
-    color: $white;
+    color: $dark;
     font-size: 1.7em;
     margin: 0;
     margin-top: 9px;
   }
+}
+
+.iconp {
+  color: $dark !important;
 }
 
 li {
@@ -95,9 +99,6 @@ li {
 //   }
 // }
 
-
-
-
 // p {
 //   color: $navy;
 //   margin: 0;
@@ -106,13 +107,12 @@ li {
 //   font-size: 0.8em;
 // }
 
-
 .navside {
   cursor: pointer;
   padding: 3px;
   font-family: $font;
   color: $navy;
-  
+
   &:hover {
     background: $pale;
     color: $navy;
@@ -121,12 +121,12 @@ li {
   }
 }
 
-.navsidelist{
+.navsidelist {
   cursor: pointer;
   padding: 3px;
   font-family: $font;
   color: $navy;
-  
+
   &:hover {
     color: $white;
     transition: $ease;
@@ -135,8 +135,8 @@ li {
   }
 }
 
-.navsideweb{
-   cursor: pointer;
+.navsideweb {
+  cursor: pointer;
   padding: 3px;
   font-family: $font;
   color: $navy;
@@ -153,7 +153,7 @@ li {
   padding: 3px;
   font-family: $font;
   color: $navy;
-  
+
   &:hover {
     color: $dark;
     font-size: 17px;
@@ -161,8 +161,6 @@ li {
     text-decoration: none;
   }
 }
-
-
 
 .timespace {
   margin: 0;
@@ -178,9 +176,9 @@ li {
 }
 
 .timespace2 {
-color: $white;
-text-align: center;
-margin-top: 10px;
+  color: $white;
+  text-align: center;
+  margin-top: 10px;
 }
 
 #spacedate {
@@ -221,15 +219,13 @@ margin-top: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
 
-// for time box 
+// for time box
 .two {
   grid-area: two;
   grid-column: 1;
 }
-
 
 //weather
 .three {
@@ -278,16 +274,13 @@ margin-top: 10px;
   margin-left: 15px;
 }
 
-
 .six {
   grid-area: six;
   grid-column: 2;
   background: $pale;
 }
 
-
 .reminders--list {
-  
   margin-top: 25px;
   margin-bottom: -70px;
 }
@@ -297,8 +290,7 @@ margin-top: 10px;
 .note {
   color: $navy;
   margin-top: 20px;
-  margin-left: 15PX;
-
+  margin-left: 15px;
 }
 
 .info {
@@ -316,7 +308,6 @@ margin-top: 10px;
   height: 5px;
 }
 
-
 // game
 
 .flip-container {
@@ -325,8 +316,6 @@ margin-top: 10px;
   float: left;
 }
 /* turning on hover */
-
-
 
 .flip-container,
 .front,
@@ -373,7 +362,7 @@ margin-top: 10px;
 .back p {
   font-size: 18px;
   margin-top: 0px;
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   border: 1px solid white;
   border-radius: 20px;
   background-color: #333;

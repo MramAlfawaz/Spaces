@@ -1,24 +1,21 @@
-    <%= javascript_pack_tag 'index' %>
-    <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'index' %>
 
+    <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
 <header>
   <nav class="landnav" am-layout="horizontal">
   <a href="https://www.google.com/">GOOGLE</a>
-
   <a class="right" href="#"><div id="clock"><h4 id="weather" class="indexweather">  </h4></div></a>
   </nav>
 </header>
-
 <div class="indexcontainer">
 
-  
-    <h1 id="greeting" class="ttext"><h1 class="ttext"><% if user_signed_in? %>, <%= current_user.name.upcase %></h1></h1>  
-    <% end %>  <br><br>
-
+ <% if user_signed_in? %> 
+    <h1 id="greeting" class="ttext">   <h1 class="ttext">, <%= current_user.name %></h1></h1>  
+    <% end %> 
     <h2 id="hourminutesecond" class="time"> </h2>
     <h2 id="daymonthyear" class="date"> </h2>
+          <div id="clock"><h4 id="weather" class="indexweather">  </h4></div>
 
-       
     <% if user_signed_in? %> 
        <a class="dash" href="/dashboard/space">DASHBOARD</a> 
        <a class="dash" href="">LOGOUT</a>
@@ -27,5 +24,4 @@
        <a class="dash" href="/users/sign_up">SIGN UP</a>
     <% end %>
     <h3 id="text" class="quote"></h3>
-
 </div>

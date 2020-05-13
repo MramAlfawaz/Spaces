@@ -27,7 +27,7 @@ $pale: #a4e1e7;
 $navy: #37474f;
 $dark2: #263238;
 $white: #ffffff;
-$icon: #F78D72;
+$icon: #f78d72;
 
 .clearfix:before,
 .clearfix:after {
@@ -60,7 +60,12 @@ $icon: #F78D72;
   padding-bottom: 50px !important;
 }
 
-.divBackground1{
+.mailLink {
+  text-decoration: none !important;
+  color: white;
+}
+
+.divBackground1 {
   background-color: rgb(236, 236, 236);
   font-family: $font;
   width: 100%;
@@ -69,7 +74,6 @@ $icon: #F78D72;
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 }
-
 
 .todo-list-container {
   width: 60%;

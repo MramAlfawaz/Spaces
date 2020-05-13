@@ -7,6 +7,9 @@ class NotesController < ApplicationController
     end
     
     def show
+        if @note.user_id != current_user.id
+            redirect_to notes_path
+        end
     end
     
     def new
@@ -29,6 +32,9 @@ class NotesController < ApplicationController
 
     
     def edit
+        if @note.user_id != current_user.id
+            redirect_to notes_path
+        end
     end
     
 

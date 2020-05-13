@@ -11,6 +11,9 @@ class FavoritesController < ApplicationController
   # GET /favorites/1
   # GET /favorites/1.json
   def show
+    if @favorite.user_id != current_user.id
+      redirect_to favorites_path
+    end
   end
 
   # GET /favorites/new
@@ -20,6 +23,9 @@ class FavoritesController < ApplicationController
 
   # GET /favorites/1/edit
   def edit
+    if @favorite.user_id != current_user.id
+      redirect_to favorites_path
+    end
   end
 
   # POST /favorites

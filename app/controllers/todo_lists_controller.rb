@@ -11,6 +11,9 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+    if @todo_list.user_id != current_user.id
+      redirect_to todo_lists_path
+    end
   end
 
   # GET /todo_lists/new
@@ -20,6 +23,9 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/1/edit
   def edit
+    if @todo_list.user_id != current_user.id
+      redirect_to todo_lists_path
+    end    
   end
 
   # POST /todo_lists

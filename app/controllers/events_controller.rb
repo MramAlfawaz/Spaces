@@ -11,6 +11,9 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    if @event.user_id != current_user.id
+      redirect_to events_path
+    end
   end
 
   # GET /events/new
@@ -20,6 +23,9 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    if @event.user_id != current_user.id
+      redirect_to events_path
+    end
   end
 
   # POST /events

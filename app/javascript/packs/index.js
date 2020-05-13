@@ -108,6 +108,19 @@ fetch(`https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?me
   console.log(error);
 });
 
+// $("#logout").click(function(e){
+//   alert("hi")
+//   e.preventDefault();
+//   fetch("/users/sign_out", {method: "delete"})
+//   .then(data => {
+//   console.log(data)
+// })
+
+//   .catch((error) => {
+//     console.log(error);
+//   });
+// } )
+
 })
 
 

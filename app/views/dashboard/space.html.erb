@@ -1,5 +1,4 @@
  <%= javascript_pack_tag 'dashboard' %>
- <%= stylesheet_link_tag 'dashboard', 'data-turbolinks-track': 'reload' %>
 
 <div id="dashboard-container">
 
@@ -7,7 +6,7 @@
 
     <div class="avatar">
       <% if user_signed_in? %> 
-         <div class="iconspace"><p><%= current_user.name.first() %></p></div>
+         <div class="iconspace"><p><%= current_user.name.first %></p></div>
          <p class="iconp"> HELLO, <%= current_user.name.upcase %> </p>
        <% else %>
          <div class="iconspace"><p></p></div>
@@ -17,7 +16,7 @@
 
     <nav class="menu">
       <% if user_signed_in? %> 
-      <%= link_to "EDIT PROFILE", edit_user_registration_path, class: "navside" %>
+      <%= link_to "EDIT PROFILE", edit_user_registration_path, class: "navsidedit" %>
       <% else%>
        <%= link_to "Sign in", new_user_session_path, class: "navside1" %>
       <% end %>    
@@ -61,7 +60,7 @@
     <div class="item three">
       <div class="weather">
       <br>
-        <i class="fas fa-7x fa-calendar-alt"></i>
+        <i class="fas fa-6x fa-calendar-alt"></i>
               <br><br>
         
         <%= link_to "CALENDER", events_path, class: "navside" %>

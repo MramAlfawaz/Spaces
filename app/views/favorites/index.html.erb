@@ -1,4 +1,5 @@
 
+<div class="divBackground">
 
 <br>
 <h1 class="h1web">Favorites WEBs</h1>
@@ -12,11 +13,13 @@
   <tr class="trweb">
     <td class="tdweb" ><%= favorite.name %></td>
     <td class="tdweb" ><%= favorite.url %></td>
-    <td class="tdweb" ><%= link_to 'Edit', edit_favorite_path(favorite) %></td>
-    <td class="tdweb" ><%= link_to 'Destroy', favorite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="tdweb" ><%= link_to 'Edit', edit_favorite_path(favorite) , class: "btn submitDark" %></td>
+    <td class="tdweb" ><%= link_to 'Destroy', favorite,  class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
     <% end %>
+      <td class="tdweb" colspan="4" style="text-align: center;">    <%= link_to 'New Favorite', new_favorite_path , class: "btn submitDark" %></td>
+
 </table>
 
 <br> <br>
-<%= link_to 'New Favorite', new_favorite_path , class: "newfav" %>
+</div>

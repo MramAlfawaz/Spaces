@@ -4,6 +4,8 @@
 // .welcome-index
 
 // Mixin
+$light: #eeeeee;
+
 @mixin v-align {
   position: relative;
   top: 50%;
@@ -104,7 +106,7 @@ header,
   font-weight: bold;
   color: white;
   border-radius: 4px;
-  background-color: black;
+  background-color: rgba($color: #d4d1d1, $alpha: 0.8);
 }
 
 .landnav[am-layout][am-layout~="horizontal"] a {

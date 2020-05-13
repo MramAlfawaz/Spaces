@@ -7,7 +7,7 @@
     <div class="avatar">
       <% if user_signed_in? %> 
          <div class="iconspace"><p><%= current_user.name.first %></p></div>
-         <p class="iconp"> HELLO, <%= current_user.name.upcase %> </p>
+         <p class="iconp"> HELLO, <%= current_user.name.upcase %> <br> <%= current_user.email%> </p>
        <% else %>
          <div class="iconspace"><p></p></div>
          <p > Hello </p>

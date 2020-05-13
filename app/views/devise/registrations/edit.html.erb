@@ -28,17 +28,17 @@
                   <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
                 <% end %>
 
-                <%= f.label :password %><span style="color: red;"> leave it blank if you don't want to change it</span><br />
+                <%= f.label :password %><span style="color: #dc3545;"> -leave it blank if you don't want to change it</span><br />
                   <%= f.password_field :password,
                               required: false, class: "input input--password",
                               input_html: { autocomplete: "new-password" } %>
 
-                  <%= f.label :password_confirmation %><span style="color: red;"> leave it blank if you don't want to change it</span><br />
+                  <%= f.label :password_confirmation %><span style="color: #dc3545;"> -leave it blank if you don't want to change it</span><br />
                   <%= f.password_field :password_confirmation,
                               required: false, class: "input input--password",
                               input_html: { autocomplete: "new-password" } %>
 
-                  <%= f.label :current_password %><span style="color: red;"> we need your current password to confirm your changes</span><br />
+                  <%= f.label :current_password %><span style="color: #dc3545;"> -we need your current password to confirm your changes</span><br />
                   <%= f.password_field :current_password,
                               hint: "we need your current password to confirm your changes",
                               required: true, class: "input input--password",

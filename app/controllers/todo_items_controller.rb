@@ -3,17 +3,20 @@ class TodoItemsController < ApplicationController
     before_action :set_todo_item, except: [:create]
 
     def create
+     respond_to do |format|
         @todo_item = @todo_list.todo_items.create(todo_item_params)
-        redirect_to @todo_list
+        format.html { redirect_to @todo_list, notice: 'Toodo List item was added.' }
+     end  
     end
     
     def destroy
+     respond_to do |format|
         if @todo_item.destroy
-            flash[:success] = "Toodo List item was deleted."
+            format.html { redirect_to @todo_list, notice: 'Toodo List item was deleted.' }
         else
-            flash[:error] = "Todo List item could not be deleted."
+            format.html { redirect_to @todo_list, notice: 'Todo List item could not be deleted.' }
         end
-        redirect_to @todo_list              
+      end              
     end
     
     def complete

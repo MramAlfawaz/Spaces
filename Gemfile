@@ -18,6 +18,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'bootstrap-sass'
+gem "simple_calendar", "~> 2.0"
 
 gem 'autoprefixer-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

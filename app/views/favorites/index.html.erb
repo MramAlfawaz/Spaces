@@ -1,29 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Favorites</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @favorites.each do |favorite| %>
-      <tr>
-        <td><%= favorite.name %></td>
-        <td><%= favorite.url %></td>
-        <td><%= link_to 'Show', favorite %></td>
-        <td><%= link_to 'Edit', edit_favorite_path(favorite) %></td>
-        <td><%= link_to 'Destroy', favorite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="divBackground">
 
 <br>
+<h1 class="h1web">Favorites WEBs</h1>
+<br>
+<div class="todo-list-container">
+<table class="rwd-table">
+  <tr>
+    <th class="thweb">Name</th>
+    <th class="thweb">Url</th>
+    <th class="thweb" colspan="3">Setting</th>
+  </tr>
+      <% @favorites.each do |favorite| %>
+  <tr class="trweb">
+    <td class="tdweb" ><%= favorite.name %></td>
+    <td class="tdweb" ><%= favorite.url %></td>
+    <td class="tdweb" ><%= link_to 'Edit', edit_favorite_path(favorite) , class: "btn submitDark" %></td>
+    <td class="tdweb" ><%= link_to 'Destroy', favorite,  class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+    <% end %>
+      <td class="tdweb" colspan="4" style="text-align: center;">    <%= link_to 'New Favorite', new_favorite_path , class: "btn submitDark" %></td>
 
-<%= link_to 'New Favorite', new_favorite_path %>
+</table>
+</div>
+<br> <br>
+</div>

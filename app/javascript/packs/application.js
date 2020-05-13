@@ -24,3 +24,9 @@ require("../trix_uploads.js");
 
 require("trix");
 require("@rails/actiontext");
+
+$(document).on("turbolinks:load", function () {
+  setTimeout(function () {
+    $(".alert").fadeOut();
+  }, 3000);
+});

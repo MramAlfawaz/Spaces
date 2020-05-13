@@ -24,11 +24,10 @@
             <form id="signup">
                     <%# New Passowrd %>
                     <%= f.label :new_password %><%= (": #{@minimum_password_length} characters minimum" if @minimum_password_length)%>
-                    <%= f.input :password,
+                    <%= f.password_field :password,
                       required: true,
                       autofocus: true,
                       class: "input input--password",
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %><br >
                     <%# Confirm New Passowrd %>
                     <%= f.label :password_confirmation %><br >

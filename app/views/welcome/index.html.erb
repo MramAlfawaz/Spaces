@@ -2,12 +2,6 @@
     <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-success"><%= alert %></p>
-      <% end %>
 <header>
   <nav class="landnav" am-layout="horizontal">
   <a href="https://www.google.com/">GOOGLE</a>
@@ -27,8 +21,9 @@
 
        
     <% if user_signed_in? %> 
-       <a class="btn btn-light" href="/dashboard/space">DASHBOARD</a> 
-       <a class="btn btn-light" href="">LOGOUT</a>
+       <a class="btn btn-dark" href="/dashboard/space">DASHBOARD</a> 
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-dark" %>
+
      <% else %>
        <a class="btn btn-light" href="/users/sign_in">SIGN IN</a>
        <a class="btn btn-light" href="/users/sign_up">SIGN UP</a>

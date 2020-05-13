@@ -60,6 +60,17 @@ $icon: #F78D72;
   padding-bottom: 50px !important;
 }
 
+.divBackground1{
+  background-color: rgb(236, 236, 236);
+  font-family: $font;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+
 .todo-list-container {
   width: 60%;
   max-width: 750px;
@@ -75,13 +86,14 @@ $icon: #F78D72;
 .todo_list_title {
   text-align: center;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   color: $navy;
+  letter-spacing: 1px;
   margin: 0;
   a {
     text-decoration: none;
-    color: white;
+    color: $navy;
     transition: all 0.4s ease-in-out;
     &:hover {
       opacity: 0.4;

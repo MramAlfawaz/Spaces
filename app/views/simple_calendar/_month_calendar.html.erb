@@ -4,7 +4,7 @@
     <span class="calendar-title"><strong><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></strong></span>
     <%= link_to t('simple_calendar.next', default: 'NEXT'), calendar.url_for_next_view, class: "btn btn-light" %>
     <span style="margin-left: 200px">
-      <%= link_to "Schedule a New Event", new_event_path , class: "btn btn-danger"%> 
+      <%= link_to "New Event", new_event_path , class: "btn btn-danger"%> 
     </span>
   </div>
 

@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+    before_action :authenticate_user!
     before_action :find_note, only: [:show, :edit, :update, :destroy]
 
     def index
@@ -13,29 +14,41 @@ class NotesController < ApplicationController
     end
     
     def create
+       respond_to do |format|
         @note = current_user.notes.build(note_params)
-
         if @note.save
-            redirect_to @note
+            format.html { redirect_to notes_path, notice: 'Note was successfully created.' }
+            format.json { render :show, status: :ok, location: @note }
         else 
             render 'new'
-        end        
+            format.html { render :new }
+            format.json { render json: @note.errors, status: :unprocessable_entity }
+        end  
     end
+    end 
+
     
     def edit
     end
     
+
     def update
+        respond_to do |format|
         if @note.update(note_params)
-			redirect_to @note
+            format.html { redirect_to notes_path, notice: 'Note was successfully updated.' }
+            format.json { render :show, status: :ok, location: @note }
 		else
-			render 'edit'
-		end
+             format.html { render :edit }
+             format.json { render json: @note.errors, status: :unprocessable_entity }
+        end
+    end  
     end
     
     def destroy
+      respond_to do |format|
         @note.destroy
-		redirect_to notes_path
+        format.html { redirect_to notes_path, notice: 'Note was successfully deleted.' }
+      end  
     end
     
     private

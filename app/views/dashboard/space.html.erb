@@ -48,10 +48,10 @@
         </label>
         <br> 
            <label>
-           <%= link_to "Add note ", new_note_path , class: "navsidenote" %> 
+           <%= link_to "Add Note ", new_note_path , class: "navsidenote" %> 
         </label> 
         <label>
-              <%= link_to " All notes", notes_path, class: "navsidenote"  %> 
+              <%= link_to " All Notes", notes_path, class: "navsidenote"  %> 
         </label>  
       </div>
     </div>
@@ -119,6 +119,7 @@
         <% end %>
         <br>
            <%= link_to "Add Website", new_favorite_path , class: "navsideweb" %> 
+           <%= link_to "All Websites", favorites_path , class: "navsideweb" %> 
       </div>
     </div>
 
@@ -142,10 +143,10 @@
         </label>
         <br> 
         <label>
-          <%= link_to "View lists", todo_lists_path , class: "navsidelist" %> 
+          <%= link_to "Add List", new_todo_list_path, class: "navsidelist" %> 
         </label> 
         <label>
-          <%= link_to "Add new list", new_todo_list_path, class: "navsidelist" %> 
+          <%= link_to "All Lists", todo_lists_path , class: "navsidelist" %> 
         </label>        
       </div>
     </div>

@@ -1,7 +1,17 @@
 // CALENDER ICON
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap");
+$font: "Raleway", sans-serif;
+$mono: "PT Mono", monospace;
+
+.eventHeader {
+  font-family: $mono;
+  color: #37474f;
+}
+
 .icon {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   width: 16em;
   height: 16em;
@@ -104,12 +114,12 @@
   font-size: 2em;
   padding: 2em;
   text-align: center;
-  color: black;
+  color: #37474f;
 }
 
 .calenderLink {
   text-decoration: none !important;
-  color: green;
+  color: #37474f;
 }
 
 .wideCenter {
@@ -125,7 +135,7 @@
     display: block;
     height: 1em;
     width: 100%;
-    background-color: darken(#38cc70, 10%);
+    background-color: darken(#25857d, 10%);
   }
 }
 .accordion dd,
@@ -149,7 +159,7 @@
 }
 .accordionTitle,
 .accordion__Heading {
-  background-color: #38cc70;
+  background-color: #25857d;
   text-align: center;
   font-weight: 700;
   padding: 2em;
@@ -157,7 +167,7 @@
   text-decoration: none;
   color: #fff;
   transition: background-color 0.5s ease-in-out;
-  border-bottom: 1px solid darken(#38cc70, 5%);
+  border-bottom: 1px solid darken(#25857d, 5%);
   &:before {
     content: "+";
     font-size: 1.5em;
@@ -166,13 +176,13 @@
     transition: transform 0.3s ease-in-out;
   }
   &:hover {
-    background-color: darken(#38cc70, 10%);
+    background-color: darken(#25857d, 10%);
     color: #fff;
   }
 }
 .accordionTitleActive,
 .accordionTitle.is-expanded {
-  background-color: darken(#38cc70, 10%);
+  background-color: darken(#25857d, 10%);
   &:before {
     transform: rotate(-225deg);
   }

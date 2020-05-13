@@ -1,34 +1,45 @@
 $(function() {
 
-
+// to get element that shown up in operation history
     function getHistory(){
 	return document.getElementById("history-value").innerText;
 }
+// to print element that shown up in operation history
 function printHistory(num){
 	document.getElementById("history-value").innerText=num;
 }
+// to get result 
 function getOutput(){
 	return document.getElementById("output-value").innerText;
 }
+// to print result 
 function printOutput(num){
+	// 
 	if(num==""){
+		//if no value set the result place to empty
 		document.getElementById("output-value").innerText=num;
 	}
-	else{
+	else{                                                 // this fun will reads the num with , 
 		document.getElementById("output-value").innerText=getFormattedNumber(num);
 	}	
 }
+// formatted fun 
 function getFormattedNumber(num){
 	if(num=="-"){
 		return "";
 	}
+	// read num
 	var n = Number(num);
+	// use tolocal with en params to acheive this
 	var value = n.toLocaleString("en");
 	return value;
 }
+// remove , when delete CE
 function reverseNumberFormat(num){
 	return Number(num.replace(/,/g,''));
 }
+
+// calculator
 var operator = document.getElementsByClassName("operator");
 for(var i =0;i<operator.length;i++){
 	operator[i].addEventListener('click',function(){

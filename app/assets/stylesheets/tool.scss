@@ -18,12 +18,12 @@ $icon: #F78D72;
 	background-color: #eaedef;
 	margin: 0 auto;
 	position: relative;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 40px;
+	box-shadow: 0 4px 8px 0 $navy, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #result{
-	height: 120px;
+	height: 110px;
 }
 
 #history{
@@ -37,13 +37,8 @@ $icon: #F78D72;
 
 #output{
 	text-align: right;
-	height: 60px;
 	margin: 10px 20px;
 	font-size: 30px;
-}
-
-#keyboard{
-	height: 400px;
 }
 
 .operator, .number, .empty{
@@ -65,10 +60,12 @@ $icon: #F78D72;
 	cursor: pointer;
 }
 
+// on click font become samller
 .operator:active, .number:active{
 	font-size: 13px;
 }
 
+// to make outline disapear
 .operator:focus, .number:focus, .empty:focus{
 	outline: 0;
 }

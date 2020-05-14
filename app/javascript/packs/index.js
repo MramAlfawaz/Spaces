@@ -1,5 +1,6 @@
 $(function() {
 
+
 // Get Date
 var date = new Date(),
 year = date.getFullYear(),

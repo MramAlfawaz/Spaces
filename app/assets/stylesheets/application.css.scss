@@ -27,6 +27,7 @@ $pale: #a4e1e7;
 $navy: #37474f;
 $dark2: #263238;
 $white: #ffffff;
+$pale1: #c5e7d8;
 $icon: #f78d72;
 
 .clearfix:before,
@@ -290,4 +291,13 @@ $font: "Raleway", sans-serif;
       background: $white;
     }
   }
+}
+
+footer p {
+  color: $black;
+  text-align: center;
+  padding: 20px 0;
+}
+footer > p > a{
+  color: $pale1;
 }

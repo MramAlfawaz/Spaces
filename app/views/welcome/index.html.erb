@@ -40,12 +40,14 @@
      <% else %>
        <a class="btn btn-light" href="/users/sign_in">SIGN IN</a>
        <a class="btn btn-light" href="/users/sign_up">SIGN UP</a>
+       <a class="btn btn-light" href="/dashboard/space">DASHBOARD</a> 
     <% end %>
     <h3 id="text" class="quote"></h3>
 
 </div>
 
 <script>
+
 let token = (document.getElementsByTagName('meta')[1].content)
 
 document.getElementById("logout").addEventListener( "click", function(e){

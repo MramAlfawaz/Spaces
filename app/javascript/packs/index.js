@@ -12,7 +12,7 @@ document.getElementById('daymonthyear').innerHTML = day + " " + months[month] + 
 
 // Get Time
 function addZero(i) {
-// This checks to see if the number is below 10 and then prepends a '0' - clever shit :P
+// This checks to see if the number is below 10 and then prepends a '0' - 
 if (i < 10) {
     i = "0" + i;
 }

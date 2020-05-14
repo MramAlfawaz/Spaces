@@ -6,7 +6,11 @@
 
 
 ## App description :
- 
+- Forget the hassle of switching between different apps from now on! 
+Space application serves you all the applications you need on a daily basis integrated in a unified platform. You can now do it all in one place! We offer you an app with a rich functionality that let you delete other apps and rely on us for your heavy work! 
+With a homepage that lets you surf the internet, check the weather, and get the quote of the day. You’ll get also a dashboard that aids you in organizing your life with a built-in calendar, notes , to-do list, bookmarking your favorite sites, and an entertainment section. 
+
+We got your back!
 
 
 
@@ -47,7 +51,17 @@
 ## Images
 
 #### App Screenshot:
-![screenshot](https://media.idownloadblog.com/wp-content/uploads/2017/07/Select-Instagram-story-to-save-to-iPhone.jpeg)
+![screenshot](images3/Home.jpg) 
+
+![screenshot](images3/dashbored.jpg) 
+
+![screenshot](images3/cal.jpg) 
+
+![screenshot](images3/Nots.jpg) 
+
+![screenshot](images3/todo.jpg)
+
+![screenshot](images3/fav.jpg)
 
 ---
 
@@ -110,4 +124,16 @@
 
 #### ERD:
 ![ERD](images2/ERD.jpeg)
+
+### Resource
+
+- https://git.generalassemb.ly/Maram-Alfawaz/Spaces/tree/dev
+
+- https://source.unsplash.com/1600x900/?trees 
+
+- http://api.openweathermap.org/data/2.5/weather?q=Jeddah&units=metric&APPID=28a2bd8eb9a1dd27589d6cdd509169e4
+
+- https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en 
+
+
 

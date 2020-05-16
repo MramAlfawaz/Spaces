@@ -78,9 +78,9 @@ test:
   production:
     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: space_app_production
-#   username: space_app
-#   password: <%= ENV['SPACE_APP_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: space_app_production
+  username: space_app
+  password: <%= ENV['SPACE_APP_DATABASE_PASSWORD'] %>
 
